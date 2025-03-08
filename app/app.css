@@ -27,7 +27,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background: url("./heroPNG.webp"),
+  background: url("../public/heroPNG.webp"),
     linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
 }
@@ -38,7 +38,7 @@ body {
   background: linear-gradient(180deg, #404040 0%, #1e1e1e 100%);
 }
 .foodAidBg {
-  background: url("./foodAid.webp"),
+  background: url("../public/foodAid.webp"),
     linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
     linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
   background-size: cover;
