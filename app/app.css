@@ -13,3 +13,42 @@ body {
     color-scheme: dark;
   }
 }
+
+.btn-link {
+  background: linear-gradient(180deg, #ff7c3f 0%, #e24700 100%);
+  border: 2px solid #ff7c3f;
+  font-weight: 500;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+.heroBg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: url("./heroPNG.webp"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+}
+.orangeBG {
+  background: linear-gradient(180deg, #ff7c3f 0%, #e24700 100%);
+}
+.blackBG {
+  background: linear-gradient(180deg, #404040 0%, #1e1e1e 100%);
+}
+.foodAidBg {
+  background: url("./foodAid.webp"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.whiteBtn {
+  background: linear-gradient(180deg, #e6e6e6 0%, #ffffff 100%);
+}
+.hideScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
