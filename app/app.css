@@ -3,6 +3,73 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-DarkerGrotesque: "DarkerGrotesque", sans-serif;
+  --font-DMSans: "DMSans", sans-serif;
+}
+
+@font-face {
+  font-family: "DarkerGrotesque";
+  src: url("../public/fonts/Darker_Grotesque/static/DarkerGrotesque-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DarkerGrotesque";
+  src: url("../public/fonts/Darker_Grotesque/static/DarkerGrotesque-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DarkerGrotesque";
+  src: url("../public/fonts/Darker_Grotesque/static/DarkerGrotesque-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DarkerGrotesque";
+  src: url("../public/fonts/Darker_Grotesque/static/DarkerGrotesque-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DarkerGrotesque";
+  src: url("../public/fonts/Darker_Grotesque/static/DarkerGrotesque-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DMSans";
+  src: url("../public/fonts/DM_Sans/static/DMSans_18pt-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMSans";
+  src: url("../public/fonts/DM_Sans/static/DMSans_18pt-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMSans";
+  src: url("../public/fonts/DM_Sans/static/DMSans_18pt-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DMSans";
+  src: url("../public/fonts/DM_Sans/static/DMSans_18pt-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 html,
@@ -68,4 +135,13 @@ body {
 }
 .valueCardOrange {
   background: linear-gradient(180deg, #ff7c3f 0%, #e24700 100%);
+}
+
+.initiativeBg {
+  background: url("../public/initiativeBg.webp"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

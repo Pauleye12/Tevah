@@ -1,9 +1,11 @@
 const Values = () => {
   return (
-    <div className="bg-[#1E1E1E] pt-[80px] flex justify-center items-center ">
+    <div className="bg-[#1E1E1E] font-DMSans pt-[80px] flex justify-center items-center ">
       <div className="max-w-[1200px] w-full px-8 flex flex-col items-start gap-[100px] relative text-white  ">
         <div className="w-[325px] flex flex-col gap-4 text-white justify-start ">
-          <h1 className="text-[32px] font-bold ">Our Values</h1>
+          <h1 className="text-[32px] font-DarkerGrotesque font-bold  ">
+            Our Values
+          </h1>
           <p className="text-xl ">
             Our foundations core beliefs that drive our mission.
           </p>

@@ -2,19 +2,19 @@ import RightArrow from "../SVGs/RightArrow";
 
 const Mission = () => {
   return (
-    <div className="bg-white pb-[230px] pt-[160px] flex justify-center relative px-6">
+    <div className="bg-white pb-[230px] pt-[160px] flex justify-center font-DMSans relative px-6">
       <img
         className="absolute  top-5 left-[300px]"
         src="./circle.webp"
         alt=""
       />
       <div className="max-w-[1200px]  flex flex-col gap-3 items-start justify-center ">
-        <div className="w-full text-[32px] text-[#1E1E1E80] font-semibold flex justify-between items-center ">
+        <div className="w-full text-[32px] text-[#1E1E1E80] font-semibold font-DarkerGrotesque flex justify-between items-center ">
           <h1>Our Mission</h1>
           <h1>Founded 2024</h1>
         </div>
-        <div className="max-w-[400px] w-full flex items-start flex-col gap-3 ">
-          <p className="text-[18px] leading-[28px] text-[#1E1E1E] ">
+        <div className="max-w-[440px] w-full flex items-start flex-col gap-3 ">
+          <p className="text-2xl  text-[#1E1E1E] ">
             We are a community-driven foundation dedicated to making education
             accessible and supporting those in need. Every donation, volunteer
             effort, and shared moment makes a difference.{" "}

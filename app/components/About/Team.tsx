@@ -2,17 +2,19 @@ import { LinkedIn } from "../SVGs/Socials";
 
 const Team = () => {
   return (
-    <div className="w-full py-[244px] bg-white ">
+    <div className="w-full font-DMSans py-[244px] bg-white ">
       <div className="border border-solid flex justify-center items-center px-8 w-full  border-[#1E1E1E33]">
         <div className="max-w-[1200px] py-10 flex justify-between items-start gap-5 w-full ">
           <div className="flex flex-col max-w-[325px] w-full gap-4 text-[#1E1E1E]">
-            <h2 className="text-[32px] font-bold">Our Team</h2>
+            <h2 className="text-[32px] font-DarkerGrotesque font-bold">
+              Our Team
+            </h2>
             <p className="text-xl">
               Meet the Dedicated Team Committed to Transforming Lives Through
               Education
             </p>
           </div>
-          <p className="text-[#1E1E1E80] text-[32px] font-semibold">
+          <p className="text-[#1E1E1E80] text-[32px] font-DarkerGrotesque font-semibold">
             The 4 Pillars
           </p>
         </div>

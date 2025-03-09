@@ -3,9 +3,9 @@ import Stacks from "../SVGs/Stacks";
 
 const Impact = () => {
   return (
-    <div className="bg-[#F8F8FA] pb-[250px] w-full grid place-items-center  ">
+    <div className="bg-[#F8F8FA] font-DMSans pb-[250px] w-full grid place-items-center  ">
       <div className="max-w-[1200px] w-full flex flex-col gap-3 items-start justify-center ">
-        <h1 className="text-[#1E1E1E80] font-semibold text-[32px] ">
+        <h1 className="text-[#1E1E1E80] font-semibold text-[32px] font-DarkerGrotesque ">
           Our Impact
         </h1>
         <p className="text-[#1E1E1E] max-w-[400px] w-full text-xl ">

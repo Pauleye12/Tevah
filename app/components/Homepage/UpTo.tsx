@@ -43,9 +43,9 @@ const blogDets = [
 ];
 const UpTo = () => {
   return (
-    <div className="w-full bg-[#FFFFFF] pb-[250px] flex items-center flex-col gap-20 ">
+    <div className="w-full font-DMSans bg-[#FFFFFF] pb-[250px] flex items-center flex-col gap-20 ">
       <div className="flex flex-col px-5 pt-[50px] max-w-[1100px] w-full items-start justify-start ">
-        <h1 className="capitalize mb-3 text-[#1E1E1E80] text-[32px]  text-semibold ">
+        <h1 className="capitalize mb-3 text-[#1E1E1E80] text-[32px]  text-semibold font-DarkerGrotesque ">
           What We’ve Been Up To
         </h1>
         <p className="text-[#1E1E1E] text-lg ">

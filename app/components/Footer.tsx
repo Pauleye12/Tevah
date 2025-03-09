@@ -3,10 +3,10 @@ import { Facebook, Instagram, LinkedIn, Twitter } from "./SVGs/Socials";
 
 const Footer = ({ bgColor }: { bgColor: string }) => {
   return (
-    <div className="w-full">
+    <div className="w-full font-DMSans">
       <div
         style={{ backgroundColor: bgColor }}
-        className={`w-full flex justify-center items-center py-[240px] px-10 ${
+        className={`w-full flex justify-center items-center py-[240px] px-10 font-DMSans ${
           !bgColor ? "bg-white" : ""
         }`}
       >

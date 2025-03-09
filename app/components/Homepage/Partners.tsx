@@ -2,11 +2,11 @@ import RightArrow from "../SVGs/RightArrow";
 
 const Partners = () => {
   return (
-    <div className="bg-[#F8F8FA] pt-[88px] pb-10 w-full grid place-items-center  ">
+    <div className="bg-[#F8F8FA] font-DMSans pt-[88px] pb-10 w-full grid place-items-center  ">
       <div className="max-w-[1200px] w-full flex flex-col gap-20 items-start justify-center ">
         <div className="flex justify-between w-full items-center ">
           <div className="flex flex-col gap-3 ">
-            <h1 className="text-[#1E1E1E80] font-semibold text-[32px] ">
+            <h1 className="text-[#1E1E1E80] font-semibold text-[32px] font-DarkerGrotesque ">
               Our Partners
             </h1>
             <p className="text-[#1E1E1E] max-w-[400px] w-full text-xl ">

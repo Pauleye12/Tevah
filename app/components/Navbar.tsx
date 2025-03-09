@@ -3,7 +3,7 @@ import Dropdown from "./SVGs/Dropdown";
 
 const Navbar = () => {
   return (
-    <header className="bg-white fixed border-b border-[#D4D4D4] border-solid py-2 top-0 z-50 w-full left-0 flex justify-center items-center ">
+    <header className="bg-white fixed border-b border-[#D4D4D4] border-solid py-2 font-DMSans top-0 z-50 w-full left-0 flex justify-center items-center ">
       <div className="max-w-6xl w-full bg-transparent flex justify-between items-center ">
         <Link to="/">
           <img className="max-w-[150px] w-full " src="./logo.webp" alt="" />

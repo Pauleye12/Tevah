@@ -2,12 +2,12 @@ import RightArrowOrange from "../SVGs/RightArrowOrange";
 
 const Involved = () => {
   return (
-    <div className="bg-[#1E1E1E] relative px-6 pt-[50px] grid place-items-center ">
+    <div className="bg-[#1E1E1E] font-DMSans relative px-6 pt-[50px] grid place-items-center ">
       <img className="absolute right-0 top-0 " src="./square2.webp" alt="" />
 
       <div className="max-w-[1100px] w-full ">
         <div className="flex flex-col items-start justify-start ">
-          <h1 className="capitalize mb-3 text-[#F2F2F280] text-[32px]  text-semibold ">
+          <h1 className="capitalize mb-3  text-[#F2F2F280] text-[32px]  text-semibold font-DarkerGrotesque ">
             How to get involved
           </h1>
           <p className="text-[#F2F2F2] text-lg ">
