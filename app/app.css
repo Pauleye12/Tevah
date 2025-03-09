@@ -52,3 +52,20 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+/* about */
+.beHeardBg {
+  background: url("../public/beHeard.webp"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.valueCardWhite {
+  background: linear-gradient(180deg, #e6e6e6 0%, #ffffff 100%);
+}
+.valueCardOrange {
+  background: linear-gradient(180deg, #ff7c3f 0%, #e24700 100%);
+}

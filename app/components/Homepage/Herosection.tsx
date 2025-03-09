@@ -2,7 +2,7 @@ import { Link } from "react-router";
 
 const Herosection = () => {
   return (
-    <div className="heroBg min-h-screen pt-[150px] pb-[450px]  mt-[100px] flex flex-col justify-center items-center ">
+    <div className="heroBg min-h-screen pt-[150px] pb-[450px]  mt-[80px] flex flex-col justify-center items-center ">
       <div className="max-w-[550px]  w-full flex flex-col gap-5 items-center ">
         <h1 className="text-white text-[48px] text-center font-semibold leading-[58px] ">
           Empowering <span className="text-[#E24700] ">Minds</span> and
