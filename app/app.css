@@ -90,6 +90,10 @@ body {
   border-radius: 12px;
   font-size: 16px;
 }
+
+.reachOutBtn {
+  background: linear-gradient(180deg, #ff7c3f 0%, #e24700 100%);
+}
 .heroBg {
   background-size: cover;
   background-position: center;

@@ -1,5 +1,5 @@
 import React from "react";
-import RightArrow from "../SVGs/RightArrow";
+import { RightArrow } from "../SVGs/RightArrow";
 
 const ProgramCard = ({
   icon,

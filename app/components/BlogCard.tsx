@@ -1,3 +1,5 @@
+import { RightArrow } from "./SVGs/RightArrow";
+
 const BlogCard = ({
   img,
   title,
@@ -6,6 +8,7 @@ const BlogCard = ({
   description,
   button,
   category,
+  rightArrow = false,
 }: {
   img: string;
   title: string;
@@ -14,6 +17,7 @@ const BlogCard = ({
   description: string;
   button: string;
   category: string;
+  rightArrow?: boolean;
 }) => {
   return (
     <div className="flex w-[325px] cursor-pointer  overflow-hidden flex-col items-center gap-5 ">
@@ -33,8 +37,8 @@ const BlogCard = ({
           <h1 className="font-semibold text-xl ">{title}</h1>
           <p className=" ">{description}</p>
         </div>
-        <button className=" text-[#1E1E1E] w-fit  border border-solid border-[#1E1E1E] py-3 pl-3 pr-11 rounded-lg ">
-          {button}
+        <button className=" text-[#1E1E1E] w-fit flex gap-2 border border-solid border-[#1E1E1E] py-3 px-3  rounded-lg ">
+          {button} {rightArrow && <RightArrow />}
         </button>
       </div>
     </div>

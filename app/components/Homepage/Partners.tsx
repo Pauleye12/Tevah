@@ -1,4 +1,4 @@
-import RightArrow from "../SVGs/RightArrow";
+import { RightArrow } from "../SVGs/RightArrow";
 
 const Partners = () => {
   return (
