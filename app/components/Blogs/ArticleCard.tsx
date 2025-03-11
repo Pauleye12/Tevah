@@ -1,12 +1,15 @@
+import { Link } from "react-router";
 import { RightArrow } from "../SVGs/RightArrow";
 
 const ArticleCard = ({
   img,
+  blogId,
   title,
   date,
   description,
 }: {
   img: string;
+  blogId: string;
   title: string;
   date: string;
   description: string;
@@ -25,9 +28,12 @@ const ArticleCard = ({
           <p className=" text-[#1E1E1E]">{description}</p>
         </div>
 
-        <button className=" text-[#1E1E1E] w-fit flex items-center gap-2 border border-solid border-[#1E1E1E] py-3 pl-3 pr-11 rounded-lg ">
+        <Link
+          to={`/blog/${blogId}`}
+          className=" text-[#1E1E1E] w-fit flex items-center gap-2 border border-solid border-[#1E1E1E] py-3 pl-3 pr-11 rounded-lg "
+        >
           Read Article <RightArrow />
-        </button>
+        </Link>
       </div>
     </div>
   );

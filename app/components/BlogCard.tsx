@@ -1,7 +1,9 @@
+import { Link } from "react-router";
 import { RightArrow } from "./SVGs/RightArrow";
 
 const BlogCard = ({
   img,
+  blogId,
   title,
   location,
   date,
@@ -11,6 +13,7 @@ const BlogCard = ({
   rightArrow = false,
 }: {
   img: string;
+  blogId: string;
   title: string;
   location: string;
   date: string;
@@ -37,9 +40,12 @@ const BlogCard = ({
           <h1 className="font-semibold text-xl ">{title}</h1>
           <p className=" ">{description}</p>
         </div>
-        <button className=" text-[#1E1E1E] w-fit flex gap-2 border border-solid border-[#1E1E1E] py-3 px-3  rounded-lg ">
+        <Link
+          to={`/blog/${blogId}`}
+          className=" text-[#1E1E1E] w-fit flex gap-2 border border-solid border-[#1E1E1E] py-3 px-3  rounded-lg "
+        >
           {button} {rightArrow && <RightArrow />}
-        </button>
+        </Link>
       </div>
     </div>
   );

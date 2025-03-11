@@ -1,29 +1,30 @@
-import BlogCard from "../BlogCard";
+import BlogCard from "../../BlogCard";
+
 const blogDets = [
   {
-    img: "./learn1.webp",
+    img: "/learn1.webp",
     blogId: "1",
     title: "Education for All Summit",
     location: "Los Angeles, CA",
     date: "April 10, 2025",
     description:
       "Join educators, changemakers, and supporters as we discuss innovative solutions for accessible education worldwide.",
-    button: "Register Now",
+    button: "Read Article",
     category: "Upcoming",
   },
   {
-    img: "./strength.webp",
+    img: "/strength.webp",
     blogId: "2",
     title: "Community Outreach & School Supply Drive",
     location: "Chicago, IL",
     date: "March 24, 2025",
     description:
       "Help us distribute school supplies, mentor students, and support underprivileged schools in our local communities.",
-    button: "Volunteer Today",
+    button: "Read Article",
     category: "Upcoming",
   },
   {
-    img: "./change.webp",
+    img: "/change.webp",
     blogId: "3",
     title: "Annual Charity Gala",
     location: "New York City",
@@ -34,7 +35,7 @@ const blogDets = [
     category: "Fufilled",
   },
   {
-    img: "./run.webp",
+    img: "/run.webp",
     blogId: "4",
     title: "Run for Education – 5K Charity Run",
     location: "Miami, FL",
@@ -45,29 +46,23 @@ const blogDets = [
     category: "Fufilled",
   },
 ];
-const UpTo = () => {
+const RelatedArticle = () => {
   return (
-    <div className="w-full font-DMSans bg-[#FFFFFF] pb-[250px] flex items-center flex-col gap-20 ">
-      <div className="flex flex-col px-5 pt-[50px] max-w-[1100px] w-full items-start justify-start ">
-        <h1 className="capitalize mb-3 text-[#1E1E1E80] text-[32px]  text-semibold font-DarkerGrotesque ">
-          What We’ve Been Up To
+    <div className="flex mt-[200px] items-center px-6 justify-center bg-white gap-4">
+      <div className="max-w-[1200px] flex-col flex items-center justify-center gap-9  ">
+        <h1 className="text-[#1E1E1E] font-DarkerGrotesque text-[32px] text-center w-full font-bold">
+          Related Articles
         </h1>
-        <p className="text-[#1E1E1E] text-lg ">
-          From fundraisers to community outreach.
-        </p>
-        <p className="text-[#1E1E1E] text-lg ">
-          We organize events that make a difference!
-        </p>
-      </div>
-      <div className="  relative w-full overflow-x-scroll hideScrollbar ">
-        <div className="flex pl-[150px] pr-10 min-w-max gap-10">
-          {blogDets.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
-          ))}
+        <div className=" mt-5 relative w-full overflow-x-scroll hideScrollbar ">
+          <div className="flex pl-[150px] pr-10 min-w-max gap-10">
+            {blogDets.map((blog, index) => (
+              <BlogCard key={index} {...blog} rightArrow={true} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default UpTo;
+export default RelatedArticle;

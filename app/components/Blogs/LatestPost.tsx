@@ -4,6 +4,7 @@ import ArticleCard from "./ArticleCard";
 const posts = [
   {
     img: "/Article1.webp",
+    blogId: "1",
     title: "Empowering Futures: How Scholarships Are Changing Lives",
     date: "March 5, 2025",
     description:
@@ -11,6 +12,7 @@ const posts = [
   },
   {
     img: "/article2.webp",
+    blogId: "2",
     title: "From Classrooms to Communities: The Power of Volunteerism",
     date: "February 20, 2025",
     description:
@@ -18,6 +20,7 @@ const posts = [
   },
   {
     img: "/article3.webp",
+    blogId: "3",
     title: "Bridging the Gap: Technology and Education in Underserved Areas",
     date: "January 15, 2025",
     description:
@@ -25,6 +28,7 @@ const posts = [
   },
   {
     img: "/article4.webp",
+    blogId: "4",
     title: "Small Acts, Big Impact: How Donations Change Lives",
     date: "December 10, 2024",
     description:
@@ -32,6 +36,7 @@ const posts = [
   },
   {
     img: "/article5.webp",
+    blogId: "5",
     title:
       "A Teacher’s Perspective: The Challenges and Triumphs of Education Today",
     date: "November 22, 2024",
@@ -40,6 +45,7 @@ const posts = [
   },
   {
     img: "/article6.webp",
+    blogId: "6",
     title: "Beyond the Books: Life Skills Every Student Should Learn",
     date: "October 5, 2024",
     description:

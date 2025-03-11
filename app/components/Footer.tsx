@@ -19,7 +19,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           <div className="flex items-center">
             <img
               className=" -translate-x-12 rounded-4xl shadow-xl -left-10 top-1/2 "
-              src="./Mail2.webp"
+              src="/Mail2.webp"
               alt=""
             />
             <div className="flex  flex-col gap-4 items-start">

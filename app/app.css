@@ -5,6 +5,7 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-DarkerGrotesque: "DarkerGrotesque", sans-serif;
   --font-DMSans: "DMSans", sans-serif;
+  --font-Manrope: "Manrope", sans-serif;
 }
 
 @font-face {
@@ -71,10 +72,31 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Manrope";
+  src: url("../public/fonts/Manrope/static/Manrope-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../public/fonts/Manrope/static/Manrope-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../public/fonts/Manrope/static/Manrope-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white dark:bg-white;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
