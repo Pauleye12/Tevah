@@ -1,9 +1,13 @@
 import { Link } from "react-router";
 import { Facebook, Instagram, LinkedIn, Twitter } from "./SVGs/Socials";
+import { useState } from "react";
+import Donate from "./PopUps/Donate";
 
 const Footer = ({ bgColor }: { bgColor: string }) => {
+  const [donate, setDonate] = useState(false);
   return (
     <div className="w-full font-DMSans">
+      {donate && <Donate setDonate={setDonate} />}
       <div
         style={{ backgroundColor: bgColor }}
         className={`w-full flex justify-center items-center py-[240px] px-10 font-DMSans ${
@@ -50,7 +54,10 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
             <h3 className="text-xl font-medium text-[#1E1E1E] max-w-[266px] w-full ">
               Join us in creating opportunities through education and support.
             </h3>
-            <button className="underline w-fit text-[#FF7C3F] text-lg ">
+            <button
+              onClick={() => setDonate(true)}
+              className="underline cursor-pointer w-fit text-[#FF7C3F] text-lg "
+            >
               Donate Now
             </button>
           </div>

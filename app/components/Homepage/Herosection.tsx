@@ -1,6 +1,10 @@
 import { Link } from "react-router";
 
-const Herosection = () => {
+const Herosection = ({
+  setDonate,
+}: {
+  setDonate: (value: boolean) => void;
+}) => {
   return (
     <div className="heroBg min-h-screen pt-[150px] pb-[450px]  mt-[80px] flex flex-col justify-center items-center ">
       <div className="max-w-[560px] font-DMSans  w-full flex flex-col gap-5 items-center ">
@@ -13,9 +17,12 @@ const Herosection = () => {
           Through education and support, we create opportunities and change
           lives.{" "}
         </p>
-        <Link className="btn-link mt-2" to="/">
+        <button
+          className="btn-link cursor-pointer mt-2"
+          onClick={() => setDonate(true)}
+        >
           Donate Now
-        </Link>
+        </button>
       </div>
       {/* <div className="mb-[600px]"></div> */}
     </div>

@@ -4,6 +4,7 @@ import BlogCard from "../BlogCard";
 const blogDets = [
   {
     img: "./learn1.webp",
+    blogId: "1",
     title: "Education for All Summit",
     location: "Los Angeles, CA",
     date: "April 10, 2025",
@@ -14,6 +15,7 @@ const blogDets = [
   },
   {
     img: "./strength.webp",
+    blogId: "2",
     title: "Community Outreach & School Supply Drive",
     location: "Chicago, IL",
     date: "March 24, 2025",
@@ -24,6 +26,7 @@ const blogDets = [
   },
   {
     img: "./change.webp",
+    blogId: "3",
     title: "Annual Charity Gala",
     location: "New York City",
     date: "January 10, 2025",
@@ -34,6 +37,7 @@ const blogDets = [
   },
   {
     img: "./run.webp",
+    blogId: "4",
     title: "Run for Education – 5K Charity Run",
     location: "Miami, FL",
     date: "December 10, 2024",

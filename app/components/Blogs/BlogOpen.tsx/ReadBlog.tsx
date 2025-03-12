@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router";
 import Dropdown from "~/components/SVGs/Dropdown";
 import {
@@ -9,6 +9,7 @@ import {
 } from "~/components/SVGs/Socials";
 
 const ReadBlog = () => {
+  const [donate, setDonate] = useState(false);
   return (
     <div className="w-full flex flex-col font-DMSans items-center justify-center bg-white mt-[80px] pt-[70px]">
       <div className="max-w-[950px] w-full px-5 flex-col gap-[56px] flex items-start justify-center">
@@ -141,7 +142,10 @@ const ReadBlog = () => {
               generations. Want to make a difference?
             </p>
           </div>
-          <button className="bg-[#1E1E1E] text-white px-5 py-4 w-fit rounded-lg">
+          <button
+            onClick={() => setDonate(true)}
+            className="bg-[#1E1E1E] text-white px-5 py-4 w-fit rounded-lg cursor-pointer"
+          >
             Support A Scholar today!
           </button>
         </div>

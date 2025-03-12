@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { RightArrow } from "../SVGs/RightArrow";
 
 const Volunteer = () => {
+  const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#F8F8FA] py-[132px] w-full flex items-center justify-center flex-col">
       <div className="w-full flex justify-center border-b border-[#1E1E1E33] border-solid px-6 pb-5 font-DMSans ">
@@ -23,7 +25,10 @@ const Volunteer = () => {
         <div className="w-full flex items-center gap-5">
           <div className="w-full flex flex-col gap-5">
             <img src="/volunteer.webp" alt="" />
-            <button className="bg-[#1E1E1E] text-white font-medium  flex justify-center py-4 px-4 items-center gap-2">
+            <button
+              onClick={() => setGetInvolved(true)}
+              className="bg-[#1E1E1E] text-white font-medium  flex justify-center py-4 px-4 items-center gap-2 cursor-pointer"
+            >
               Become a Volunteer <RightArrow />{" "}
             </button>
           </div>

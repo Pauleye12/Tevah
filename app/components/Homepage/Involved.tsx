@@ -1,6 +1,8 @@
+import GetInvoled from "../PopUps/GetInvoled";
 import RightArrowOrange from "../SVGs/RightArrowOrange";
-
+import { useState } from "react";
 const Involved = () => {
+  const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#1E1E1E] font-DMSans relative px-6 pt-[50px] grid place-items-center ">
       <img className="absolute right-0 top-0 " src="./square2.webp" alt="" />
@@ -63,13 +65,17 @@ const Involved = () => {
                   lasting impact.
                 </p>
               </div>
-              <button className="whiteBtn border-2 border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium ">
+              <button
+                onClick={() => setGetInvolved(true)}
+                className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
+              >
                 Get Involved
               </button>
             </div>
           </div>
         </div>
       </div>
+      {getInvolved && <GetInvoled setGetInvolved={setGetInvolved} />}
     </div>
   );
 };

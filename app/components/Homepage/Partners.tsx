@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { RightArrow } from "../SVGs/RightArrow";
+import GetInvoled from "../PopUps/GetInvoled";
 
 const Partners = () => {
+  const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#F8F8FA] font-DMSans pt-[88px] pb-10 w-full grid place-items-center  ">
       <div className="max-w-[1200px] w-full flex flex-col gap-20 items-start justify-center ">
@@ -14,7 +17,10 @@ const Partners = () => {
               individuals
             </p>
           </div>
-          <button className="bg-white border flex items-center gap-2 border-solid border-[#1E1E1E] rounded-lg font-medium text-[#1E1E1E] py-4 px-3 ">
+          <button
+            onClick={() => setGetInvolved(true)}
+            className="bg-white border flex items-center gap-2 border-solid border-[#1E1E1E] rounded-lg cursor-pointer font-medium text-[#1E1E1E] py-4 px-3 "
+          >
             Get Involved <RightArrow />
           </button>
         </div>
@@ -26,6 +32,7 @@ const Partners = () => {
           <img className="w-[210px]" src="./change.webp" alt="" />
         </div>
       </div>
+      {getInvolved && <GetInvoled setGetInvolved={setGetInvolved} />}
     </div>
   );
 };

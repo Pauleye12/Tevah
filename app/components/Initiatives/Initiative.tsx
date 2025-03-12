@@ -1,6 +1,7 @@
-import React from "react";
-
+import { useState } from "react";
+import Donate from "../PopUps/Donate";
 const Initiative = () => {
+  const [donate, setDonate] = useState(false);
   return (
     <div className="w-full min-h-screen py-[100px] font-DMSans  mt-[80px]  initiativeBg relative flex justify-center items-center ">
       <div className="w-full max-w-[1200px] flex justify-start ">
@@ -15,9 +16,15 @@ const Initiative = () => {
             that every child and young adult has the support they need to
             succeed.
           </p>
-          <button className="mt-4 w-fit btn-link">Donate Now</button>
+          <button
+            onClick={() => setDonate(true)}
+            className="mt-4 w-fit btn-link cursor-pointer"
+          >
+            Donate Now
+          </button>
         </div>
       </div>
+      {donate && <Donate setDonate={setDonate} />}
     </div>
   );
 };
