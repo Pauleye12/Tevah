@@ -19,7 +19,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [donate, setDonate] = useState(false);
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col overflow-x-hidden">
       <Herosection setDonate={setDonate} />
       <Mission />
       <Impact />

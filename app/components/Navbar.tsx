@@ -1,14 +1,22 @@
 import { Link, NavLink } from "react-router";
 import Dropdown from "./SVGs/Dropdown";
+import { MenuIcon } from "./SVGs/RightArrow";
 
 const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
   return (
     <header className="bg-white fixed border-b border-[#D4D4D4] border-solid py-2 font-DMSans top-0 z-50 w-full left-0 flex justify-center items-center ">
-      <div className="max-w-6xl w-full bg-transparent flex justify-between items-center ">
+      <div className="max-w-[1200px] w-full bg-transparent flex justify-between items-center px-5">
         <Link to="/">
           <img className="max-w-[150px] w-full " src="/logo.webp" alt="" />
         </Link>
-        <div className="flex gap-4 items-center">
+
+        {/* Mobile Navbar */}
+        <button className="flex md:hidden gap-4 cursor-pointer items-center">
+          <MenuIcon />
+        </button>
+
+        {/* Desktop Navbar */}
+        <div className=" hidden md:flex gap-4 items-center">
           <NavLink
             className={({ isActive }) =>
               isActive

@@ -18,16 +18,16 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           style={{
             background: "linear-gradient(180deg, #FF7C3F 0%, #E24700 100%)",
           }}
-          className="max-w-[1000px] pr-[72px] py-[37px] rounded-[24px] w-full relative "
+          className="max-w-[1000px] px-4 pt-20 md:pt-[37px] md:px-0 md:pr-[72px] py-[37px] rounded-[24px] w-full relative "
         >
-          <div className="flex items-center">
+          <div className="flex flex-col w-full md:flex-row items-center">
             <img
-              className=" -translate-x-12 rounded-4xl shadow-xl -left-10 top-1/2 "
+              className=" w-[161px] md:w-fit md:-translate-x-12 -translate-x-1/2 absolute md:static md:rounded-4xl shadow-xl left-1/2 -top-[50px] "
               src="/Mail2.webp"
               alt=""
             />
-            <div className="flex  flex-col gap-4 items-start">
-              <h1 className="text-[28px] font-semibold text-white">
+            <div className="flex w-full flex-col gap-4 items-start">
+              <h1 className="md:text-[28px] text-[20px] w-full md:font-semibold font-medium text-white">
                 Subscribe to our newsletter for the latest updates and insights.
               </h1>
               <div className="max-w-[370px] w-full bg-[#1E1E1E] rounded-[10px] p-1 flex items-center gap-2">
@@ -48,10 +48,10 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col gap-4 items-center pt-[72px] bg-white border-t border-solid border-[#1E1E1E33]">
-        <div className="px-10 text-[#1E1E1E] w-full flex justify-between items-start">
-          <div className="flex flex-col gap-10">
-            <h3 className="text-xl font-medium text-[#1E1E1E] max-w-[266px] w-full ">
+      <div className="w-full px-7 flex flex-col gap-4 items-center pt-[72px] bg-white border-t border-solid border-[#1E1E1E33]">
+        <div className="md:px-10 text-[#1E1E1E] w-full flex flex-col md:flex-row justify-between gap-10 md:gap-0 items-center md:items-start">
+          <div className="flex items-center w-full md:w-fit flex-col gap-10">
+            <h3 className="text-xl text-center md:text-left md:font-medium text-[#1E1E1E] md:max-w-[266px] w-full ">
               Join us in creating opportunities through education and support.
             </h3>
             <button
@@ -61,7 +61,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
               Donate Now
             </button>
           </div>
-          <div className="flex flex-col text-lg gap-3">
+          <div className="flex md:flex-col flex-wrap justify-center text-lg gap-5 gap-y-6">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/initiative">Initiative</Link>
@@ -70,14 +70,14 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
 
             <Link to="/">Contact</Link>
           </div>
-          <div className="flex flex-col gap-3 text-lg">
+          <div className="flex flex-col items-center md:items-start gap-3 text-lg">
             <p>+234 (0) 744 4543 321</p>
             <p>+234 (0) 744 4543 321</p>
             <a href="http://info@TevahCharityfoundation.com">
               info@TevahCharityfoundation.com
             </a>
           </div>
-          <div className="flex gap-3">
+          <div className="flex justify-between md:justify-center gap-3">
             <a
               className="border border-solid border-[#1E1E1E] rounded-xl px-4 py-3 flex items-center justify-center "
               href=""
@@ -109,7 +109,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           </div>
         </div>
         <img src="./footerLogo.webp" alt="" />
-        <div className="border-t border-solid border-[#1E1E1E33] flex justify-between items-center gap-10 py-5 px-10 w-full text-[#1E1E1E80] ">
+        <div className="border-t border-solid border-[#1E1E1E33] flex justify-between md:items-center flex-col md:flex-row md:gap-10 py-5 md:px-10 px-1 w-full text-[#1E1E1E80] ">
           <p>TevahCharityFoundation©2025</p>
           <p>Terms of Service | Privacy Policy</p>
         </div>

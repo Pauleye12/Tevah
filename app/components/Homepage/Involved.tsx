@@ -1,14 +1,24 @@
 import GetInvoled from "../PopUps/GetInvoled";
+import { PlusIcon } from "../SVGs/RightArrow";
 import RightArrowOrange from "../SVGs/RightArrowOrange";
 import { useState } from "react";
 const Involved = () => {
   const [getInvolved, setGetInvolved] = useState(false);
   return (
-    <div className="bg-[#1E1E1E] font-DMSans relative px-6 pt-[50px] grid place-items-center ">
-      <img className="absolute right-0 top-0 " src="./square2.webp" alt="" />
+    <div className="bg-[#1E1E1E] font-DMSans relative  pt-[50px] grid place-items-center ">
+      <img
+        className="absolute w-[91px] md:w-fit right-0 top-0 "
+        src="./square2.webp"
+        alt=""
+      />
+      <img
+        className="absolute  left-[30px] top-[30px] "
+        src="./Dots.webp"
+        alt=""
+      />
 
-      <div className="max-w-[1100px] w-full ">
-        <div className="flex flex-col items-start justify-start ">
+      <div className="max-w-[1100px]  mt-10 md:mt-0 w-full ">
+        <div className="flex flex-col px-6 items-start justify-start ">
           <h1 className="capitalize mb-3  text-[#F2F2F280] text-[32px]  text-semibold font-DarkerGrotesque ">
             How to get involved
           </h1>
@@ -19,38 +29,50 @@ const Involved = () => {
             Choose how you want to make an impact!
           </p>
         </div>
-        <div className="mt-[100px] rounded-t-4xl flex pl-14  bg-[#F8F8FA] w-full relative ">
-          <div className="w-[40%] py-[60px] pr-3 flex flex-col gap-6  ">
+        <div className="mt-[100px] md:rounded-t-4xl flex px-10 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative ">
+          <div className="md:w-[40%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
             <img
-              className="absolute left-[60px] top-[30px] "
+              className="absolute hidden md:flex  left-[60px] top-[30px] "
               src="./Dots.webp"
               alt=""
             />
-            <div className="text-[#FF7C3F] text-[28px] font-medium flex items-center gap-6 justify-between ">
-              <p className="flex items-center w-full border-b-2 px-1 py-5 border-[#C5C5C580] border-solid gap-2">
-                <RightArrowOrange /> <span>Donate</span>
+            <div className=" w-full  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 justify-between border-b-2 border-t-2 border-[#C5C5C580] border-solid md:border-none ">
+              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                <span className="hidden md:flex">
+                  <RightArrowOrange />
+                </span>{" "}
+                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                  <PlusIcon />
+                </span>
+                <span className="text-[#1E1E1E] md:text-[#FF7C3F]">Donate</span>
               </p>
-              <p className="text-[24px]">01</p>
+              <p className="text-[24px] text-[#C5C5C580]">01</p>
             </div>
-            <div className="text-[#1E1E1E] text-[28px] font-medium flex items-center justify-between gap-6 ">
-              <p className="flex items-center w-full border-b-2 px-1 py-5 border-[#C5C5C580] border-solid gap-2">
+            <div className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 border-b-2 border-[#C5C5C580] border-solid md:border-none ">
+              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                  <PlusIcon />
+                </span>
                 Volunteer
               </p>
               <p className="text-[#C5C5C580] text-[24px]">02</p>
             </div>
-            <div className="text-[#1E1E1E] text-[28px] font-medium flex items-center justify-between gap-6 ">
-              <p className="flex items-center w-full border-b-2 px-1 py-5 border-[#C5C5C580] border-solid gap-2">
+            <div className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 border-b-2 border-[#C5C5C580] border-solid md:border-none ">
+              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                  <PlusIcon />
+                </span>
                 Partner With Us
               </p>
               <p className="text-[#C5C5C580] text-[24px] ">03</p>
             </div>
             <img
-              className="absolute left-[60px] bottom-[20px] "
+              className="absolute hidden md:flex  left-[60px] bottom-[20px] "
               src="./Dots.webp"
               alt=""
             />
           </div>
-          <div className="foodAidBg rounded-tr-4xl w-full min-h-full flex items-end py-3 pb-9 px-8 ">
+          <div className="foodAidBg hidden md:flex rounded-tr-4xl w-full min-h-full items-end py-3 pb-9 px-8 ">
             <div className="flex items-end  w-full justify-between">
               <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
                 <h2 className="text-lg font-semibold">

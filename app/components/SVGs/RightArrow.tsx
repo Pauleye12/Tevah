@@ -78,3 +78,42 @@ export const Close = () => {
     </svg>
   );
 };
+
+export const MenuIcon = () => {
+  return (
+    <svg
+      width="20"
+      height="14"
+      viewBox="0 0 20 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M19 5H5M19 1H1M19 9H1M19 13H5"
+        stroke="black"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const PlusIcon = () => {
+  return (
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M7 1.625C7 1.07272 6.55228 0.625 6 0.625C5.44772 0.625 5 1.07272 5 1.625V5H1.625C1.07272 5 0.625 5.44772 0.625 6C0.625 6.55228 1.07272 7 1.625 7H5L5 10.375C5 10.9273 5.44772 11.375 6 11.375C6.55228 11.375 7 10.9273 7 10.375L7 7L10.375 7C10.9273 7 11.375 6.55228 11.375 6C11.375 5.44772 10.9273 5 10.375 5L7 5V1.625Z"
+        fill="white"
+      />
+    </svg>
+  );
+};
