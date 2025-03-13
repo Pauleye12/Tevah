@@ -1,5 +1,6 @@
 import { RightArrow } from "../SVGs/RightArrow";
 import { useRef, useState, useEffect } from "react";
+import { motion } from "motion/react";
 
 const Mission = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -30,10 +31,27 @@ const Mission = () => {
       currentRef?.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const imgWrapperVariants = {
+    initial: { opacity: 0 },
+    inView: {
+      opacity: 1,
+      transition: { duration: 0.2, ease: "easeOut", staggerChildren: 0.3 },
+    },
+  };
+  const imgVariants = {
+    initial: { opacity: 0.6, y: 100 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <div className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center font-DMSans relative px-7">
+    <div className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center  font-DMSans relative px-7">
       <img
-        className="absolute w-[184px] md:w-fit  md:top-5 top-[210px] md:left-[300px] left-[260px]"
+        className="absolute w-[184px] transition-all duration-2000 animate-pulse md:w-fit  md:top-5 top-[210px] md:left-[300px] left-[260px]"
         src="./circle.webp"
         alt=""
       />
@@ -57,12 +75,32 @@ const Mission = () => {
           ref={scrollRef}
           className="w-full mt-14 flex overflow-x-scroll hideScrollbar justify-center items-center"
         >
-          <div className="w-full flex gap-6 ">
+          <motion.div
+            variants={imgWrapperVariants}
+            initial="initial"
+            whileInView="inView"
+            className="w-full flex gap-6 "
+          >
             {/* Refactor to add background image */}
-            <img className=" w-[239px] md:w-fit " src="./kid1.webp" alt="" />
-            <img className=" w-[239px] md:w-fit " src="./kid2.webp" alt="" />
-            <img className=" w-[239px] md:w-fit " src="./kid3.webp" alt="" />
-          </div>
+            <motion.img
+              variants={imgVariants}
+              className=" w-[239px] md:w-fit "
+              src="./kid1.webp"
+              alt=""
+            />
+            <motion.img
+              variants={imgVariants}
+              className=" w-[239px] md:w-fit "
+              src="./kid2.webp"
+              alt=""
+            />
+            <motion.img
+              variants={imgVariants}
+              className=" w-[239px] md:w-fit "
+              src="./kid3.webp"
+              alt=""
+            />
+          </motion.div>
         </div>
         <div className="w-full md:hidden max-w-[1100px] px-7 mt-4 flex justify-center">
           <div className="flex w-full gap-6 justify-between items-center">

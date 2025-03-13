@@ -1,5 +1,5 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+
 import Herosection from "~/components/Homepage/Herosection";
 import Mission from "~/components/Homepage/Mission";
 import Impact from "~/components/Homepage/Impact";

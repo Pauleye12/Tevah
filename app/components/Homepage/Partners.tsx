@@ -1,9 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { RightArrow } from "../SVGs/RightArrow";
 import GetInvoled from "../PopUps/GetInvoled";
 
+import { AnimatePresence, motion } from "motion/react";
+
+const content = [
+  <p key={1} className="">
+    Wanna Partner
+  </p>,
+
+  <p key={2} className="underline ">
+    Get Involved
+  </p>,
+  // <p key={3} className="">
+  //   {" "}
+  // </p>,
+];
+
+const PWrapper = () => {
+  const [index, setIndex] = useState(0);
+  const Component = content[index];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % content.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        className="absolute top-1/2 -translate-1/2 left-1/2   "
+        key={index}
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "-100%" }}
+        transition={{ duration: 0.35, ease: "linear" }}
+      >
+        {Component}
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
 const Partners = () => {
   const [getInvolved, setGetInvolved] = useState(false);
+  // const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  // useEffect(() => {
+  //   const scrollItems = scrollRef.current?.children;
+  //   let index = 0;
+
+  //   const interval = setInterval(() => {
+  //     if (scrollItems) {
+  //       scrollItems[index].scrollIntoView({ behavior: "smooth" });
+  //       index = (index + 1) % scrollItems.length;
+  //     }
+  //   }, 6000);
+
+  //   return () => clearInterval(interval);
+  // }, []);
+
   return (
     <div className="bg-[#F8F8FA] font-DMSans md:pt-[88px] pt-[40px] px-7 md:pb-10 pb-5 w-full grid place-items-center  ">
       <div className="max-w-[1200px] w-full flex flex-col md:gap-20 gap-12 items-start justify-center ">
@@ -25,11 +81,13 @@ const Partners = () => {
           </button>
         </div>
         <div className="flex w-full gap-4  justify-between flex-wrap ">
-          <img className=" w-[100px] md:w-[210px]" src="/change.webp" alt="" />
-          <img className=" w-[100px] md:w-[210px]" src="/change.webp" alt="" />
-          <img className=" w-[100px] md:w-[210px]" src="/change.webp" alt="" />
-          <img className=" w-[100px] md:w-[210px]" src="/change.webp" alt="" />
-          {/* <img className=" w-[85px] md:w-[210px]" src="/change.webp" alt="" /> */}
+          <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
+          <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
+          <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
+          <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
+          <div className="w-[100px] relative overflow-hidden md:w-[210px] h-[100px] text-[#1E1E1E] font-semibold text-xl md:h-[210px] flex  bg-white">
+            <PWrapper />
+          </div>
         </div>
 
         <button

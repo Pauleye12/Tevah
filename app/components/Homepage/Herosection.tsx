@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-
+import { motion } from "motion/react";
 const Herosection = ({
   setDonate,
 }: {
@@ -7,7 +7,12 @@ const Herosection = ({
 }) => {
   return (
     <div className="heroBg min-h-screen pt-[150px] pb-[150px] md:pb-[450px] px-[33px]  mt-[80px] flex flex-col justify-center items-center ">
-      <div className="max-w-[560px] font-DMSans  w-full flex flex-col gap-5 items-center ">
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="max-w-[560px] font-DMSans  w-full flex flex-col gap-5 items-center "
+      >
         <h1 className="text-white md:text-[64px] text-[48px] text-center font-semibold font-DarkerGrotesque md:leading-[65px] leading-[45px] ">
           Empowering <span className="text-[#E24700] ">Minds</span> and
           Transforming <span className="text-[#E24700] ">Lives</span>, One Step
@@ -23,7 +28,7 @@ const Herosection = ({
         >
           Donate Now
         </button>
-      </div>
+      </motion.div>
       {/* <div className="mb-[600px]"></div> */}
     </div>
   );

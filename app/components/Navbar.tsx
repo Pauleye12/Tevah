@@ -34,9 +34,9 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
         <div className=" hidden md:flex gap-4 items-center">
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "text-[#E24700] font-medium px-2 py-1 "
-                : "text-[#1E1E1ECC] font-medium px-2 py-1 "
+              `${
+                isActive ? "text-[#E24700]" : "text-[#1E1E1ECC]"
+              } font-medium px-2 py-1 relative before:content-[url('/Underline.svg')] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:opacity-0 before:scale-50 before:transition-opacity before:duration-300 hover:before:opacity-100 transition-all duration-300 hover:before:scale-100 hover:font-semibold hover:text-[#1e1e1e] `
             }
             to="/about"
           >
@@ -44,9 +44,9 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "text-[#E24700] font-medium px-2 py-1 "
-                : "text-[#1E1E1ECC] font-medium px-2 py-1 "
+              `${
+                isActive ? "text-[#E24700]" : "text-[#1E1E1ECC]"
+              } font-medium px-2 py-1 relative before:content-[url('/Underline.svg')] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:opacity-0 before:scale-50 before:transition-opacity before:duration-300 hover:before:opacity-100 tran hover:before:scale-100 hover:font-semibold hover:text-[#1e1e1e] `
             }
             to="/initiatives"
           >
@@ -54,9 +54,9 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "text-[#E24700] font-medium px-2 py-1 "
-                : "text-[#1E1E1ECC] font-medium px-2 py-1 "
+              `${
+                isActive ? "text-[#E24700]" : "text-[#1E1E1ECC]"
+              } font-medium px-2 py-1 relative before:content-[url('/Underline.svg')] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:opacity-0 before:scale-50 before:transition-opacity before:duration-300 hover:before:opacity-100 tran hover:before:scale-100 hover:font-semibold hover:text-[#1e1e1e] `
             }
             to="/blog"
           >
@@ -64,9 +64,9 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
           </NavLink>
           <NavLink
             className={({ isActive }) =>
-              isActive
-                ? "text-[#E24700] font-medium px-2 py-1 "
-                : "text-[#1E1E1ECC] font-medium px-2 py-1 "
+              `${
+                isActive ? "text-[#E24700]" : "text-[#1E1E1ECC]"
+              } font-medium px-2 py-1 relative before:content-[url('/Underline.svg')] before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:opacity-0 before:scale-50 before:transition-opacity before:duration-300 hover:before:opacity-100 tran hover:before:scale-100 hover:font-semibold hover:text-[#1e1e1e] `
             }
             to="/contact"
           >

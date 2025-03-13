@@ -2,15 +2,109 @@ import GetInvoled from "../PopUps/GetInvoled";
 import { PlusIcon } from "../SVGs/RightArrow";
 import RightArrowOrange from "../SVGs/RightArrowOrange";
 import { useState } from "react";
+import { motion, type Variants } from "motion/react";
+
+const squareVariants: Variants = {
+  initial: { rotateY: 0, fill: "#FF7C3F" },
+  animate: {
+    rotateY: 180,
+    fill: "#FFF",
+    transition: {
+      duration: 1,
+      ease: "easeOut",
+      repeat: Infinity,
+      repeatType: "reverse",
+      repeatDelay: 0.5,
+    },
+  },
+};
 const Involved = () => {
   const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#1E1E1E] font-DMSans relative  pt-[50px] grid place-items-center ">
-      <img
+      {/* <img
         className="absolute w-[91px] md:w-fit right-0 top-0 "
         src="./square2.webp"
         alt=""
-      />
+      /> */}
+      <svg
+        width="216"
+        height="216"
+        viewBox="0 0 216 216"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="absolute w-[91px] md:w-fit right-0 top-0 "
+      >
+        <g clip-path="url(#clip0_449_2662)">
+          <g>
+            <path
+              d="M-7.62939e-06 108H54L108 54V-7.62939e-06H54L-7.62939e-06 54V108Z"
+              fill="#FFB695"
+            />
+            <motion.path
+              variants={squareVariants}
+              initial="initial"
+              animate="animate"
+              d="M-3.8147e-06 108H54V54H-3.8147e-06V108Z"
+              fill="#FF7C3F"
+            />
+          </g>
+
+          <g>
+            {" "}
+            <path
+              d="M108 108H162L216 54V-7.62939e-06H162L108 54V108Z"
+              fill="#FFB695"
+            />
+            <motion.path
+              variants={squareVariants}
+              initial="initial"
+              animate="animate"
+              d="M108 108H162V54H108V108Z"
+              fill="#FF7C3F"
+            />
+          </g>
+
+          <g>
+            <path
+              d="M-7.62939e-06 215.998H54L108 161.998V107.998H54L-7.62939e-06 161.998V215.998Z"
+              fill="#FFB695"
+            />
+            <motion.path
+              variants={squareVariants}
+              initial="initial"
+              animate="animate"
+              d="M-3.8147e-06 215.998H54V161.998H-3.8147e-06V215.998Z"
+              fill="#FF7C3F"
+            />
+          </g>
+          <g>
+            {" "}
+            <path
+              d="M108 215.998H162L216 161.998V107.998H162L108 161.998V215.998Z"
+              fill="#FFB695"
+            />
+            <motion.path
+              variants={squareVariants}
+              initial="initial"
+              animate="animate"
+              d="M108 215.998H162V161.998H108V215.998Z"
+              fill="#FF7C3F"
+            />
+          </g>
+        </g>
+        <defs>
+          <clipPath id="clip0_449_2662">
+            <rect
+              width="216"
+              height="216"
+              fill="white"
+              transform="matrix(-1 0 0 -1 216 216)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
       <img
         className="absolute  left-[30px] top-[30px] "
         src="./Dots.webp"
@@ -29,7 +123,12 @@ const Involved = () => {
             Choose how you want to make an impact!
           </p>
         </div>
-        <div className="mt-[100px] md:rounded-t-4xl flex px-5 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative ">
+        <motion.div
+          initial={{ opacity: 0.7, y: 130 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mt-[100px] md:rounded-t-4xl flex px-5 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative "
+        >
           <div className="md:w-[40%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
             <img
               className="absolute hidden md:flex  left-[60px] top-[30px] "
@@ -95,7 +194,7 @@ const Involved = () => {
               </button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       {getInvolved && <GetInvoled setGetInvolved={setGetInvolved} />}
     </div>
