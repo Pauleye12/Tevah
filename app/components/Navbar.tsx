@@ -1,8 +1,12 @@
 import { Link, NavLink } from "react-router";
 import Dropdown from "./SVGs/Dropdown";
 import { MenuIcon } from "./SVGs/RightArrow";
+import { useState } from "react";
+import MobileNav from "./MobileNav";
 
 const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   return (
     <header className="bg-white fixed border-b border-[#D4D4D4] border-solid py-2 font-DMSans top-0 z-50 w-full left-0 flex justify-center items-center ">
       <div className="max-w-[1200px] w-full bg-transparent flex justify-between items-center px-5">
@@ -11,9 +15,20 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
         </Link>
 
         {/* Mobile Navbar */}
-        <button className="flex md:hidden gap-4 cursor-pointer items-center">
+        <button
+          onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+          className="flex md:hidden gap-4 cursor-pointer items-center"
+        >
           <MenuIcon />
         </button>
+
+        {/* Mobile Navbar */}
+        {isMobileNavOpen && (
+          <MobileNav
+            setIsMobileNavOpen={setIsMobileNavOpen}
+            setDonate={setDonate}
+          />
+        )}
 
         {/* Desktop Navbar */}
         <div className=" hidden md:flex gap-4 items-center">
