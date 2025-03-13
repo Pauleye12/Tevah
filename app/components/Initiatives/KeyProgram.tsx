@@ -79,9 +79,9 @@ const KeyProgram = () => {
   }, []);
 
   return (
-    <div className="bg-[#F8F8FA] w-full min-h-screen py-[52px] flex justify-center flex-col items-center gap-9 ">
+    <div className="bg-[#F8F8FA] w-full md:min-h-screen py-8 mb-10 md:mb-0 md:py-[52px] flex md:justify-center flex-col items-center gap-9 ">
       <div className="w-full max-w-[1100px] px-7 flex justify-start ">
-        <h1 className="font-DarkerGrotesque text-[48px] font-semibold text-[#1E1E1E] max-w-[280px] w-full ">
+        <h1 className="font-DarkerGrotesque text-[40px] leading-[40px] md:text-[48px] md:leading-[50px] font-semibold text-[#1E1E1E] max-w-[280px] w-full ">
           Key Programs & Initiatives
         </h1>
       </div>
@@ -89,7 +89,7 @@ const KeyProgram = () => {
         className="relative w-full overflow-x-scroll hideScrollbar"
         ref={scrollRef}
       >
-        <div className="flex pl-[150px] pr-10 min-w-max gap-10">
+        <div className="flex pl-5 md:pl-[150px] pr-10 min-w-max gap-10">
           {programDets.map((program, index) => (
             <ProgramCard key={index} {...program} />
           ))}

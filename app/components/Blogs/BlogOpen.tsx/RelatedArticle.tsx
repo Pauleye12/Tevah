@@ -54,7 +54,7 @@ const RelatedArticle = () => {
           Related Articles
         </h1>
         <div className=" mt-5 relative w-full overflow-x-scroll hideScrollbar ">
-          <div className="flex pl-[150px] pr-10 min-w-max gap-10">
+          <div className="flex flex-col md:flex-row md:pl-[150px] md:pr-10 min-w-max md:gap-10 gap-20">
             {blogDets.map((blog, index) => (
               <BlogCard key={index} {...blog} rightArrow={true} />
             ))}

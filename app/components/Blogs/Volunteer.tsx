@@ -4,7 +4,7 @@ import { RightArrow } from "../SVGs/RightArrow";
 const Volunteer = () => {
   const [getInvolved, setGetInvolved] = useState(false);
   return (
-    <div className="bg-[#F8F8FA] py-[132px] w-full flex items-center justify-center flex-col">
+    <div className="bg-[#F8F8FA] hidden md:flex py-[132px] w-full items-center justify-center flex-col">
       <div className="w-full flex justify-center border-b border-[#1E1E1E33] border-solid px-6 pb-5 font-DMSans ">
         <div className="max-w-[1200px] w-full flex justify-between items-start gap-5">
           <h1 className="font-DarkerGrotesque w-full max-w-[100px] text-[#1E1E11] text-5xl text-start font-semibold ">

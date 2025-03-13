@@ -1,5 +1,7 @@
 import React from "react";
 import BlogCard from "../BlogCard";
+import { useRef, useState, useEffect } from "react";
+import { RightArrow } from "../SVGs/RightArrow";
 
 const blogDets = [
   {
@@ -48,8 +50,36 @@ const blogDets = [
   },
 ];
 const MorePosts = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  const handleScrollLeft = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: -350, behavior: "smooth" });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: 350, behavior: "smooth" });
+    }
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        setScrollPosition(scrollRef.current.scrollLeft);
+      }
+    };
+
+    const currentRef = scrollRef.current;
+    currentRef?.addEventListener("scroll", handleScroll);
+    return () => {
+      currentRef?.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <div className="w-full flex flex-col pb-[180px] pt-10 text-[#1E1E1E] font-DMSans bg-white">
+    <div className="w-full flex flex-col md:pb-[180px] pb-[10px] pt-10 text-[#1E1E1E] font-DMSans bg-white">
       <h1 className="w-full text-center underline font-DarkerGrotesque font-semibold text-5xl ">
         Explore More Posts
       </h1>
@@ -58,11 +88,42 @@ const MorePosts = () => {
           Events Reports
         </h1>
       </div>
-      <div className=" mt-5 relative w-full overflow-x-scroll hideScrollbar ">
-        <div className="flex pl-[150px] pr-10 min-w-max gap-10">
+      <div
+        ref={scrollRef}
+        className=" mt-5  relative w-full overflow-x-scroll hideScrollbar "
+      >
+        <div className="flex pl-10 md:pl-[150px] pr-10 min-w-max gap-10">
           {blogDets.map((blog, index) => (
             <BlogCard key={index} {...blog} rightArrow={true} />
           ))}
+        </div>
+      </div>
+      <div className="w-full md:hidden max-w-[1100px] px-7 mt-4 flex justify-end">
+        <div className="flex gap-6 justify-between items-center">
+          <button
+            className={`rotate-180 rounded-full cursor-pointer border border-solid border-[#1E1E1E] p-2 ${
+              scrollPosition === 0 ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={handleScrollLeft}
+            disabled={scrollPosition === 0}
+          >
+            <RightArrow />
+          </button>
+          <button
+            className={`rounded-full cursor-pointer border border-solid border-[#1E1E1E] p-2 ${
+              (scrollRef.current &&
+                scrollRef.current?.scrollWidth - scrollPosition <=
+                  scrollRef.current?.clientWidth) as boolean
+            }`}
+            onClick={handleScrollRight}
+            disabled={
+              (scrollRef.current &&
+                scrollRef.current?.scrollWidth - scrollPosition <=
+                  scrollRef.current?.clientWidth) as boolean
+            }
+          >
+            <RightArrow />
+          </button>
         </div>
       </div>
     </div>

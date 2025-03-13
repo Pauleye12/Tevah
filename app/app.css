@@ -203,4 +203,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+  .initiativeBg {
+    background: url("../public/initiativeMobile.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }

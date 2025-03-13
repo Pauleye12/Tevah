@@ -4,7 +4,7 @@ import Involved from "~/components/Homepage/Involved";
 import Footer from "~/components/Footer";
 const initiatives = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Initiative />
       <KeyProgram />
       <Involved />
