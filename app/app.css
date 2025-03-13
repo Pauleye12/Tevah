@@ -209,4 +209,18 @@ body {
     background-position: center;
     background-repeat: no-repeat;
   }
+  .checkerBg {
+    background: url("");
+    background-color: #fff;
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  .checkerBg2 {
+    background: url("../public/checker4.png");
+    background-color: #fff;
+    background-size: auto;
+    background-position: right;
+    background-repeat: repeat;
+  }
 }
