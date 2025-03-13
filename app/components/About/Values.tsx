@@ -10,37 +10,39 @@ const Values = () => {
             Our foundations core beliefs that drive our mission.
           </p>
         </div>
-        <div className="w-full flex justify-center gap-4 items-end ">
-          <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardWhite h-[346px] text-[#1E1E1E]">
-            <h1 className="text-xl font-medium ">Accessibility</h1>
-            <img className="w-[124px]" src="./3dCross.webp" alt="" />
-            <p>
-              Education should be available to all, regardless of background.
-            </p>
-          </div>
-          <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardOrange h-[409px] text-white ">
-            <h1 className="text-xl font-medium ">Compassion</h1>
-            <img className="w-[124px]" src="./3dPlus.webp" alt="" />
-            <p>
-              Every initiative is driven by love, care, and a genuine desire to
-              help.
-            </p>
-          </div>
-          <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardWhite h-[464px] text-[#1E1E1E]">
-            <h1 className="text-xl font-medium ">Empowerment</h1>
-            <img className="w-[124px]" src="./3dArrow.webp" alt="" />
-            <p>
-              Knowledge is the key to breaking cycles of poverty and creating
-              lasting change.
-            </p>
-          </div>
-          <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardOrange h-[519px] text-white ">
-            <h1 className="text-xl font-medium ">Innovation</h1>
-            <img className="w-[124px]" src="./3dBlock.webp" alt="" />
-            <p>
-              We seek creative solutions to challenges in education and
-              community development.
-            </p>
+        <div className="  relative w-full overflow-x-scroll hideScrollbar ">
+          <div className="w-full flex gap-4 min-w-max items-end ">
+            <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardWhite w-[270px] h-[346px] text-[#1E1E1E]">
+              <h1 className="text-xl font-medium ">Accessibility</h1>
+              <img className="w-[124px]" src="./3dCross.webp" alt="" />
+              <p>
+                Education should be available to all, regardless of background.
+              </p>
+            </div>
+            <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardOrange w-[270px] h-[409px] text-white ">
+              <h1 className="text-xl font-medium ">Compassion</h1>
+              <img className="w-[124px]" src="./3dPlus.webp" alt="" />
+              <p>
+                Every initiative is driven by love, care, and a genuine desire
+                to help.
+              </p>
+            </div>
+            <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardWhite w-[270px] h-[464px] text-[#1E1E1E]">
+              <h1 className="text-xl font-medium ">Empowerment</h1>
+              <img className="w-[124px]" src="./3dArrow.webp" alt="" />
+              <p>
+                Knowledge is the key to breaking cycles of poverty and creating
+                lasting change.
+              </p>
+            </div>
+            <div className=" px-7 pt-7 pb-[53px] flex flex-col justify-between gap-4 valueCardOrange w-[270px] h-[519px] text-white ">
+              <h1 className="text-xl font-medium ">Innovation</h1>
+              <img className="w-[124px]" src="./3dBlock.webp" alt="" />
+              <p>
+                We seek creative solutions to challenges in education and
+                community development.
+              </p>
+            </div>
           </div>
         </div>
       </div>

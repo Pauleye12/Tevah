@@ -6,7 +6,7 @@ import Team from "~/components/About/Team";
 
 const about = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <ToBeHeard />
       <Values />
       <Team />

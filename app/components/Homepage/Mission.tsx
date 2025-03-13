@@ -31,7 +31,7 @@ const Mission = () => {
     };
   }, []);
   return (
-    <div className="bg-white pb-[230px] pt-[160px] flex justify-center font-DMSans relative px-7">
+    <div className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center font-DMSans relative px-7">
       <img
         className="absolute w-[184px] md:w-fit  md:top-5 top-[210px] md:left-[300px] left-[260px]"
         src="./circle.webp"

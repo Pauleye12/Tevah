@@ -3,8 +3,8 @@ import Stacks from "../SVGs/Stacks";
 
 const Impact = () => {
   return (
-    <div className="bg-[#F8F8FA] font-DMSans pb-[250px] w-full grid place-items-center  ">
-      <div className="max-w-[1200px] w-full flex flex-col gap-3 items-start justify-center px-7 ">
+    <div className="bg-[#F8F8FA] font-DMSans pb-[140px] md:pb-[250px] w-full grid place-items-center  ">
+      <div className="max-w-[1200px] pt-6 md:pt-0 w-full flex flex-col gap-3 items-start justify-center px-7 ">
         <h1 className="text-[#1E1E1E80] font-semibold text-[32px] font-DarkerGrotesque ">
           Our Impact
         </h1>
@@ -33,7 +33,7 @@ const Impact = () => {
         </div>
 
         {/* mobile view */}
-        <div className="mt-[88px] md:hidden flex flex-col items-center gap-3 ">
+        <div className="mt-[28px] md:hidden flex flex-col items-center gap-3 ">
           <div className="flex items-center gap-4 ">
             <img className="w-[180px]" src="./circle2.webp" alt="" />
             <div className="orangeBG px-5 text-white py-5 rounded-[12px]">

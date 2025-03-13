@@ -170,7 +170,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-
+/* .beHeardBg2 {
+  background: url("../public/about2.webp"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
 .valueCardWhite {
   background: linear-gradient(180deg, #e6e6e6 0%, #ffffff 100%);
 }
@@ -185,4 +192,15 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .beHeardBg {
+    background: url("../public/about2.webp"),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+      linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }

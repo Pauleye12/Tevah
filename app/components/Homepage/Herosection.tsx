@@ -6,7 +6,7 @@ const Herosection = ({
   setDonate: (value: boolean) => void;
 }) => {
   return (
-    <div className="heroBg min-h-screen pt-[150px] pb-[450px] px-[33px]  mt-[80px] flex flex-col justify-center items-center ">
+    <div className="heroBg min-h-screen pt-[150px] pb-[150px] md:pb-[450px] px-[33px]  mt-[80px] flex flex-col justify-center items-center ">
       <div className="max-w-[560px] font-DMSans  w-full flex flex-col gap-5 items-center ">
         <h1 className="text-white md:text-[64px] text-[48px] text-center font-semibold font-DarkerGrotesque md:leading-[65px] leading-[45px] ">
           Empowering <span className="text-[#E24700] ">Minds</span> and

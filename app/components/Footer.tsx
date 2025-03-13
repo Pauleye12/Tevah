@@ -10,7 +10,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
       {donate && <Donate setDonate={setDonate} />}
       <div
         style={{ backgroundColor: bgColor }}
-        className={`w-full flex justify-center items-center py-[240px] px-10 font-DMSans ${
+        className={`w-full flex justify-center items-center py-[200px] md:py-[240px] px-10 font-DMSans ${
           !bgColor ? "bg-white" : ""
         }`}
       >
@@ -109,7 +109,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
           </div>
         </div>
         <img src="./footerLogo.webp" alt="" />
-        <div className="border-t border-solid border-[#1E1E1E33] flex justify-between md:items-center flex-col md:flex-row md:gap-10 py-5 md:px-10 px-1 w-full text-[#1E1E1E80] ">
+        <div className="border-t border-solid border-[#1E1E1E33] flex justify-between md:items-center flex-col md:flex-row md:gap-10 md:py-5 py-3 md:px-10 px-1 w-full text-[#1E1E1E80] ">
           <p>TevahCharityFoundation©2025</p>
           <p>Terms of Service | Privacy Policy</p>
         </div>

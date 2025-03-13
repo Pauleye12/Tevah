@@ -77,8 +77,8 @@ const UpTo = () => {
     };
   }, []);
   return (
-    <div className="w-full font-DMSans md:bg-[#FFFFFF] bg-[#F8F8FA] pb-[250px] flex items-center flex-col gap-20 ">
-      <div className="flex flex-col px-7 pt-[50px] max-w-[1100px] w-full items-start justify-start ">
+    <div className="w-full font-DMSans md:bg-[#FFFFFF] bg-[#F8F8FA] md:pb-[250px] pb-[60px] flex items-center flex-col md:gap-20 gap-12 ">
+      <div className="flex flex-col px-7 md:pt-[50px] pt-[20px] max-w-[1100px] w-full items-start justify-start ">
         <h1 className="capitalize mb-3 text-[#1E1E1E80] text-[32px]  text-semibold font-DarkerGrotesque ">
           What We’ve Been Up To
         </h1>

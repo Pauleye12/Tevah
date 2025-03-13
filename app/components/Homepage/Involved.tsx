@@ -29,7 +29,7 @@ const Involved = () => {
             Choose how you want to make an impact!
           </p>
         </div>
-        <div className="mt-[100px] md:rounded-t-4xl flex px-10 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative ">
+        <div className="mt-[100px] md:rounded-t-4xl flex px-5 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative ">
           <div className="md:w-[40%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
             <img
               className="absolute hidden md:flex  left-[60px] top-[30px] "
