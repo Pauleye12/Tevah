@@ -33,7 +33,7 @@ const Mission = () => {
   }, []);
 
   const imgWrapperVariants = {
-    initial: { opacity: 0 },
+    initial: { opacity: 1 },
     inView: {
       opacity: 1,
       transition: { duration: 0.2, ease: "easeOut", staggerChildren: 0.3 },
@@ -84,18 +84,21 @@ const Mission = () => {
             {/* Refactor to add background image */}
             <motion.img
               variants={imgVariants}
+              viewport={{ once: true }}
               className=" w-[239px] md:w-fit "
               src="./kid1.webp"
               alt=""
             />
             <motion.img
               variants={imgVariants}
+              viewport={{ once: true }}
               className=" w-[239px] md:w-fit "
               src="./kid2.webp"
               alt=""
             />
             <motion.img
               variants={imgVariants}
+              viewport={{ once: true }}
               className=" w-[239px] md:w-fit "
               src="./kid3.webp"
               alt=""

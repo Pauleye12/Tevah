@@ -5,42 +5,42 @@ import { useRef, useState, useEffect } from "react";
 
 const programDets = [
   {
-    icon: <Scholarship />,
+    icon: "scholarship",
     title: "Scholarship & Financial Aid Program",
     description:
       "We provide scholarships, tuition assistance, and school supplies to ensure financial barriers don't limit a student's potential.",
     button: "Donate to Support a Student",
   },
   {
-    icon: <Mentorship />,
+    icon: "mentorship",
     title: "Mentorship & Career Guidance",
     description:
       "Students connect with experienced mentors for academic support, career advice, and essential life skills to help them navigate their future.",
     button: "Become a Mentor",
   },
   {
-    icon: <Books />,
+    icon: "books",
     title: "Books & Learning Resources Drive",
     description:
       "We provide books, learning materials, and organize reading sessions to promote literacy and education in underserved communities.",
     button: "Donate Books",
   },
   {
-    icon: <Scholarship />,
+    icon: "scholarship",
     title: "Scholarship & Financial Aid Program",
     description:
       "We provide scholarships, tuition assistance, and school supplies to ensure financial barriers don't limit a student's potential.",
     button: "Donate to Support a Student",
   },
   {
-    icon: <Mentorship />,
+    icon: "mentorship",
     title: "Mentorship & Career Guidance",
     description:
       "Students connect with experienced mentors for academic support, career advice, and essential life skills to help them navigate their future.",
     button: "Become a Mentor",
   },
   {
-    icon: <Books />,
+    icon: "books",
     title: "Books & Learning Resources Drive",
     description:
       "We provide books, learning materials, and organize reading sessions to promote literacy and education in underserved communities.",

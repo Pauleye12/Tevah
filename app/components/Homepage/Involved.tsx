@@ -18,7 +18,101 @@ const squareVariants: Variants = {
     },
   },
 };
+
+const Donate = ({
+  setGetInvolved,
+}: {
+  setGetInvolved: (value: boolean) => void;
+}) => {
+  return (
+    <div className="foodAidBg hidden md:flex rounded-tr-4xl w-full min-h-full items-end py-3 pb-9 px-8 ">
+      <div className="flex items-end  w-full justify-between">
+        <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
+          <h2 className="text-lg font-semibold">
+            Give Your Time, Make a Difference
+          </h2>
+          <p>
+            Your time and skills can create real change! Whether you're
+            mentoring students, helping with events, or assisting with community
+            programs, your efforts bring hope and opportunity to those who need
+            it most. Volunteering is more than just giving back—it’s about
+            creating meaningful connections and leaving a lasting impact.
+          </p>
+        </div>
+        <button
+          onClick={() => setGetInvolved(true)}
+          className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
+        >
+          Get Involved
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Volunteer = ({
+  setGetInvolved,
+}: {
+  setGetInvolved: (value: boolean) => void;
+}) => {
+  return (
+    <div className="foodAidBg2 hidden md:flex rounded-tr-4xl w-full min-h-full items-end py-3 pb-9 px-8 ">
+      <div className="flex items-end  w-full justify-between">
+        <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
+          <h2 className="text-lg font-semibold">
+            Give Your Time, Make a Difference
+          </h2>
+          <p>
+            Your time and skills can create real change! Whether you're
+            mentoring students, helping with events, or assisting with community
+            programs, your efforts bring hope and opportunity to those who need
+            it most. Volunteering is more than just giving back—it’s about
+            creating meaningful connections and leaving a lasting impact.
+          </p>
+        </div>
+        <button
+          onClick={() => setGetInvolved(true)}
+          className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
+        >
+          Get Involved
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Partner = ({
+  setGetInvolved,
+}: {
+  setGetInvolved: (value: boolean) => void;
+}) => {
+  return (
+    <div className="foodAidBg3 hidden md:flex rounded-tr-4xl w-full min-h-full items-end py-3 pb-9 px-8 ">
+      <div className="flex items-end  w-full justify-between">
+        <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
+          <h2 className="text-lg font-semibold">
+            Give Your Time, Make a Difference
+          </h2>
+          <p>
+            Your time and skills can create real change! Whether you're
+            mentoring students, helping with events, or assisting with community
+            programs, your efforts bring hope and opportunity to those who need
+            it most. Volunteering is more than just giving back—it’s about
+            creating meaningful connections and leaving a lasting impact.
+          </p>
+        </div>
+        <button
+          onClick={() => setGetInvolved(true)}
+          className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
+        >
+          Get Involved
+        </button>
+      </div>
+    </div>
+  );
+};
 const Involved = () => {
+  const [whichInfo, setWhichInfo] = useState("donate");
   const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#1E1E1E] font-DMSans relative  pt-[50px] grid place-items-center ">
@@ -127,43 +221,111 @@ const Involved = () => {
           initial={{ opacity: 0.7, y: 130 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true }}
           className="mt-[100px] md:rounded-t-4xl flex px-5 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative "
         >
-          <div className="md:w-[40%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
+          <div className="md:w-[50%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
             <img
               className="absolute hidden md:flex  left-[60px] top-[30px] "
               src="./Dots.webp"
               alt=""
             />
-            <div className=" w-full  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 justify-between border-b-2 border-t-2 border-[#C5C5C580] border-solid md:border-none ">
+            <div
+              onClick={() => setWhichInfo("donate")}
+              className=" w-full  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 cursor-pointer justify-between border-b-2 border-t-2 border-[#C5C5C580] border-solid md:border-none "
+            >
               <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
-                <span className="hidden md:flex">
-                  <RightArrowOrange />
-                </span>{" "}
+                {whichInfo === "donate" && (
+                  <span className="hidden md:flex">
+                    <RightArrowOrange />
+                  </span>
+                )}
                 <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
                   <PlusIcon />
                 </span>
-                <span className="text-[#1E1E1E] md:text-[#FF7C3F]">Donate</span>
+                <span
+                  className={`${
+                    whichInfo === "donate" ? "text-[#FF7C3F]" : "text-[#1E1E1E]"
+                  }`}
+                >
+                  Donate
+                </span>
               </p>
-              <p className="text-[24px] text-[#C5C5C580]">01</p>
+              <p
+                className={`${
+                  whichInfo === "donate"
+                    ? "text-[#FF7C3F] text-[24px]"
+                    : "text-[#C5C5C580] text-[24px]"
+                }`}
+              >
+                01
+              </p>
             </div>
-            <div className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 border-b-2 border-[#C5C5C580] border-solid md:border-none ">
+            <div
+              onClick={() => setWhichInfo("volunteer")}
+              className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 cursor-pointer border-b-2 border-[#C5C5C580] border-solid md:border-none "
+            >
               <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                {whichInfo === "volunteer" && (
+                  <span className="hidden md:flex">
+                    <RightArrowOrange />
+                  </span>
+                )}
                 <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
                   <PlusIcon />
                 </span>
-                Volunteer
+                <span
+                  className={`${
+                    whichInfo === "volunteer"
+                      ? "text-[#FF7C3F]"
+                      : "text-[#1E1E1E]"
+                  }`}
+                >
+                  Volunteer
+                </span>
               </p>
-              <p className="text-[#C5C5C580] text-[24px]">02</p>
+              <p
+                className={`${
+                  whichInfo === "volunteer"
+                    ? "text-[#FF7C3F] text-[24px]"
+                    : "text-[#C5C5C580] text-[24px]"
+                }`}
+              >
+                02
+              </p>
             </div>
-            <div className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 border-b-2 border-[#C5C5C580] border-solid md:border-none ">
+            <div
+              onClick={() => setWhichInfo("partner")}
+              className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 cursor-pointer border-b-2 border-[#C5C5C580] border-solid md:border-none "
+            >
               <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                {whichInfo === "partner" && (
+                  <span className="hidden md:flex">
+                    <RightArrowOrange />
+                  </span>
+                )}
                 <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
                   <PlusIcon />
                 </span>
-                Partner With Us
+                <span
+                  className={`${
+                    whichInfo === "partner"
+                      ? "text-[#FF7C3F]"
+                      : "text-[#1E1E1E]"
+                  }`}
+                >
+                  Partner With Us
+                </span>
               </p>
-              <p className="text-[#C5C5C580] text-[24px] ">03</p>
+              <p
+                className={`${
+                  whichInfo === "partner"
+                    ? "text-[#FF7C3F] text-[24px]"
+                    : "text-[#C5C5C580] text-[24px]"
+                }`}
+              >
+                03
+              </p>
             </div>
             <img
               className="absolute hidden md:flex  left-[60px] bottom-[20px] "
@@ -171,29 +333,14 @@ const Involved = () => {
               alt=""
             />
           </div>
-          <div className="foodAidBg hidden md:flex rounded-tr-4xl w-full min-h-full items-end py-3 pb-9 px-8 ">
-            <div className="flex items-end  w-full justify-between">
-              <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
-                <h2 className="text-lg font-semibold">
-                  Give Your Time, Make a Difference
-                </h2>
-                <p>
-                  Your time and skills can create real change! Whether you're
-                  mentoring students, helping with events, or assisting with
-                  community programs, your efforts bring hope and opportunity to
-                  those who need it most. Volunteering is more than just giving
-                  back—it’s about creating meaningful connections and leaving a
-                  lasting impact.
-                </p>
-              </div>
-              <button
-                onClick={() => setGetInvolved(true)}
-                className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
-              >
-                Get Involved
-              </button>
-            </div>
-          </div>
+          {/* Food aid Bg */}
+          {whichInfo === "donate" && <Donate setGetInvolved={setGetInvolved} />}
+          {whichInfo === "volunteer" && (
+            <Volunteer setGetInvolved={setGetInvolved} />
+          )}
+          {whichInfo === "partner" && (
+            <Partner setGetInvolved={setGetInvolved} />
+          )}
         </motion.div>
       </div>
       {getInvolved && <GetInvoled setGetInvolved={setGetInvolved} />}

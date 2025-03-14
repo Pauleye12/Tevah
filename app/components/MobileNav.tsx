@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import Dropdown from "./SVGs/Dropdown";
+import { AnimatePresence, motion } from "motion/react";
 
 const MobileNav = ({
   setDonate,
@@ -9,7 +10,14 @@ const MobileNav = ({
   setIsMobileNavOpen: (isMobileNavOpen: boolean) => void;
 }) => {
   return (
-    <div className="bg-white md:hidden absolute pb-12 top-[100%] px-9 pt-6 left-0 w-full z-50">
+    <motion.div
+      // key="mobile-nav"
+      initial={{ opacity: 0.2, y: -80 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="bg-white md:hidden absolute pb-12 top-[100%] px-9 pt-6 left-0 w-full z-50"
+    >
       <div className="flex w-full flex-col bg-white items-center justify-center text-xl font-medium font-DMSans text-[#1E1E1E] ">
         <Link
           onClick={() => setIsMobileNavOpen(false)}
@@ -64,7 +72,7 @@ const MobileNav = ({
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

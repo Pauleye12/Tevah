@@ -1,5 +1,15 @@
 import { useState } from "react";
 import Donate from "../PopUps/Donate";
+import { motion, type Variants } from "motion/react";
+
+const textVariants: Variants = {
+  initial: { opacity: 0.4, y: 90 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
 const Initiative = () => {
   const [donate, setDonate] = useState(false);
   return (
@@ -10,7 +20,12 @@ const Initiative = () => {
         className=" w-[184px] aspect-square md:hidden absolute top-8 right-0"
       />
       <div className="w-full max-w-[1200px] flex justify-start ">
-        <div className="max-w-[763px] w-full flex flex-col gap-7 items-start ">
+        <motion.div
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
+          className="max-w-[763px] w-full flex flex-col gap-7 items-start "
+        >
           <h1 className="text-[#1E1E1E] font-DarkerGrotesque text-[40px] md:text-[48px] font-semibold md:leading-[50px] leading-[40px] ">
             Programs & Initiatives – Changing Lives Through Education &
             Empowerment
@@ -27,7 +42,7 @@ const Initiative = () => {
           >
             Donate Now
           </button>
-        </div>
+        </motion.div>
       </div>
       {donate && <Donate setDonate={setDonate} />}
     </div>

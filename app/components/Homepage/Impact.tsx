@@ -85,8 +85,8 @@ const Impact = () => {
         {/* mobile view */}
         <div className="mt-[28px] md:hidden flex flex-col items-center gap-3 ">
           <div className="flex items-center gap-4 ">
-            {/* <img className="w-[180px]" src="./circle2.webp" alt="" /> */}
-            <svg
+            <img className="w-[180px]" src="./circle2.webp" alt="" />
+            {/* <svg
               width="270"
               height="270"
               viewBox="0 0 270 270"
@@ -110,7 +110,7 @@ const Impact = () => {
                   <stop offset="1" stop-color="white" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
 
             <div className="orangeBG px-5 text-white py-5 rounded-[12px]">
               <Stacks />
@@ -135,7 +135,8 @@ const Impact = () => {
                 </p>
               </div>
             </div>
-            <svg
+            <img className="w-[180px]" src="./quarter.webp" alt="" />
+            {/* <svg
               width="270"
               height="270"
               viewBox="0 0 270 270"
@@ -159,7 +160,7 @@ const Impact = () => {
                   <stop offset="1" stop-color="white" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
           </div>
         </div>
       </div>

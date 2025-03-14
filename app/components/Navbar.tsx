@@ -3,6 +3,7 @@ import Dropdown from "./SVGs/Dropdown";
 import { MenuIcon } from "./SVGs/RightArrow";
 import { useState } from "react";
 import MobileNav from "./MobileNav";
+import { AnimatePresence } from "motion/react";
 
 const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -24,10 +25,14 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
 
         {/* Mobile Navbar */}
         {isMobileNavOpen && (
-          <MobileNav
-            setIsMobileNavOpen={setIsMobileNavOpen}
-            setDonate={setDonate}
-          />
+          <AnimatePresence>
+            {" "}
+            <MobileNav
+              key="mobile-nav1"
+              setIsMobileNavOpen={setIsMobileNavOpen}
+              setDonate={setDonate}
+            />
+          </AnimatePresence>
         )}
 
         {/* Desktop Navbar */}

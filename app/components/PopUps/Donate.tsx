@@ -1,11 +1,25 @@
 import { useState } from "react";
 import { Close } from "../SVGs/RightArrow";
+import { motion, type Variants } from "motion/react";
 
+const textVariants: Variants = {
+  initial: { opacity: 0.6, y: 90 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
 const Donate = ({ setDonate }: { setDonate: (value: boolean) => void }) => {
   const [amount, setAmount] = useState<number | undefined>(undefined);
   return (
     <div className="bg-[#1e1e1e99] w-full h-screen fixed top-0 left-0 z-50 font-DMSans flex justify-center items-end ">
-      <div className="bg-white text-[#1E1E1E] relative w-full max-w-[890px] rounded-t-[36px]  flex flex-col gap-3  ">
+      <motion.div
+        variants={textVariants}
+        initial="initial"
+        animate="animate"
+        className="bg-white text-[#1E1E1E] relative w-full max-w-[890px] rounded-t-[36px]  flex flex-col gap-3  "
+      >
         <button
           onClick={() => setDonate(false)}
           className="p-2 grid place-items-center rounded-full border border-solid bg-white border-[#5C5C5C] cursor-pointer absolute top-10 right-10"
@@ -64,7 +78,7 @@ const Donate = ({ setDonate }: { setDonate: (value: boolean) => void }) => {
             Complete Donation
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
