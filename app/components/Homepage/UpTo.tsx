@@ -78,7 +78,7 @@ const UpTo = () => {
   }, []);
   return (
     <div className="w-full font-DMSans md:bg-[#FFFFFF] bg-[#F8F8FA] md:pb-[250px] pb-[60px] flex items-center flex-col md:gap-20 gap-12 ">
-      <div className="flex flex-col px-7 md:pt-[50px] pt-[20px] max-w-[1100px] w-full items-start justify-start ">
+      <div className="flex flex-col px-6 md:pt-[50px] pt-[20px] max-w-[1200px] w-full items-start justify-start ">
         <h1 className="capitalize mb-3 text-[#1E1E1E80] text-[32px]  text-semibold font-DarkerGrotesque ">
           What We’ve Been Up To
         </h1>
@@ -93,13 +93,13 @@ const UpTo = () => {
         ref={scrollRef}
         className="  relative w-full overflow-x-scroll hideScrollbar "
       >
-        <div className="flex pl-[40px] md:pl-[150px] pr-10 min-w-max gap-10">
+        <div className="flex max-w-[1200px] justify-center w-full px-6 md:pl-[40px] pb-2  mx-auto pr-10 min-w-max gap-10">
           {blogDets.map((blog, index) => (
-            <BlogCard key={index} {...blog} />
+            <BlogCard key={index} rightArrow={true} {...blog} />
           ))}
         </div>
       </div>
-      <div className="w-full md:hidden max-w-[1100px] px-7 mt-4 flex justify-end">
+      <div className="w-full md:hidden max-w-[1200px] px-6 mt-4 flex justify-end">
         <div className="flex gap-6 justify-between items-center">
           <button
             className={`rotate-180 rounded-full cursor-pointer border border-solid border-[#1E1E1E] p-2 ${

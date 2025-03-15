@@ -27,7 +27,7 @@ const BlogCard = ({
       <div>
         <img src={img} alt="" />
       </div>
-      <div className="flex flex-col h-full gap-8 justify-between ">
+      <div className="flex flex-col h-full gap-5 justify-between ">
         <div className="flex justify-between text-[#404040] items-center gap-3 ">
           <button className="font-semibold py-2 px-3 text-sm rounded-lg border border-solid border-[#404040] ">
             {category}
@@ -38,7 +38,7 @@ const BlogCard = ({
         </div>
         <div className="text-[#1E1E1E] flex flex-col gap-5 ">
           <h1 className="font-semibold text-xl ">{title}</h1>
-          <p className=" ">{description}</p>
+          <p className=" leading-5 ">{description}</p>
         </div>
         <Link
           to={`/blog/${blogId}`}

@@ -6,7 +6,7 @@ import Donate from "./PopUps/Donate";
 const Footer = ({ bgColor }: { bgColor: string }) => {
   const [donate, setDonate] = useState(false);
   return (
-    <div className="w-full font-DMSans">
+    <div className="w-full font-DMSans px-6 mx-auto">
       {donate && <Donate setDonate={setDonate} />}
       <div
         style={{ backgroundColor: bgColor }}
@@ -50,7 +50,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
       </div>
       <div className="w-full px-7 flex flex-col gap-4 items-center pt-[72px] bg-white border-t border-solid border-[#1E1E1E33]">
         <div className="md:px-10 text-[#1E1E1E] w-full flex flex-col md:flex-row justify-between gap-10 md:gap-0 items-center md:items-start">
-          <div className="flex items-center w-full md:w-fit flex-col gap-10">
+          <div className="flex md:items-start items-center w-full md:w-fit flex-col gap-10">
             <h3 className="text-xl text-center md:text-left md:font-medium text-[#1E1E1E] md:max-w-[266px] w-full ">
               Join us in creating opportunities through education and support.
             </h3>
@@ -61,7 +61,7 @@ const Footer = ({ bgColor }: { bgColor: string }) => {
               Donate Now
             </button>
           </div>
-          <div className="flex md:flex-col flex-wrap justify-center text-lg gap-5 gap-y-6">
+          <div className="flex md:flex-col flex-wrap justify-center text-lg gap-5 gap-y-3">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/initiative">Initiative</Link>

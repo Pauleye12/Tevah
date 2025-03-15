@@ -16,7 +16,7 @@ const GetInvoled = ({
 }: {
   setGetInvolved: (value: boolean) => void;
 }) => {
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown, setDropdown] = useState(true);
   const [dropdownValue, setDropdownValue] = useState("Select Item");
   return (
     <div className="bg-[#1e1e1e99] w-full h-screen fixed top-0 left-0 z-50 font-DMSans flex justify-center items-end ">
@@ -32,8 +32,57 @@ const GetInvoled = ({
         >
           <Close />
         </button>
+        <svg
+          width="291"
+          height="356"
+          viewBox="0 0 291 356"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute bottom-0 right-0"
+        >
+          <g clip-path="url(#clip0_273_8124)">
+            <path d="M89 0H0V89H89V0Z" fill="#1E1E1E" fill-opacity="0.25" />
+            <path d="M267 0H178V89H267V0Z" fill="#1E1E1E" fill-opacity="0.25" />
+            <path
+              d="M178 267H89V356H178V267Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+            <path
+              d="M356 267H267V356H356V267Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+            <path
+              d="M178 89H89V178H178V89Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+            <path
+              d="M356 89H267V178H356V89Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+            <path
+              d="M89 178.349H0V267.349H89V178.349Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+            <path
+              d="M267 178.349H178V267.349H267V178.349Z"
+              fill="#1E1E1E"
+              fill-opacity="0.25"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_273_8124">
+              <rect width="356" height="356" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
         <div className="w-full rounded-t-[36px] h-[110px] checkerBg2 md:hidden"></div>
-        <div className="bg-white text-[#1E1E1E]  w-full rounded-t-[36px] px-5 md:px-[50px] pb-[100px] flex flex-col gap-3 py-9 checkerBgdown ">
+        <div className="bg-white text-[#1E1E1E]  w-full rounded-t-[36px] px-5 md:px-[50px] pb-[100px] flex flex-col gap-3 py-9  ">
           <h1 className="text-[#1E1E1E] font-DarkerGrotesque text-2xl md:text-[36px] leading-[24px] md:leading-[36px] max-w-[450px] w-full text-left font-black ">
             Be the Change – Get Involved Today!
           </h1>

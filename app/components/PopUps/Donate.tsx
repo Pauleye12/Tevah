@@ -35,25 +35,41 @@ const Donate = ({ setDonate }: { setDonate: (value: boolean) => void }) => {
           <div className="flex gap-5 flex-wrap  items-center ">
             <button
               onClick={() => setAmount(10)}
-              className=" p-4 grid place-items-center rounded-full bg-transparent border border-solid border-[#1E1E1E] "
+              className={`w-[68px] h-[68px] grid place-items-center rounded-full  border border-solid border-[#1E1E1E] ${
+                amount === 10
+                  ? "bg-[#1E1E1E] text-white"
+                  : " bg-white text-[#1E1E1E] "
+              } `}
             >
               $10
             </button>
             <button
               onClick={() => setAmount(25)}
-              className=" p-4 grid place-items-center rounded-full bg-transparent border border-solid border-[#1E1E1E] "
+              className={`w-[68px] h-[68px] grid place-items-center rounded-full  border border-solid border-[#1E1E1E] ${
+                amount === 25
+                  ? "bg-[#1E1E1E] text-white"
+                  : " bg-white text-[#1E1E1E] "
+              } `}
             >
               $25
             </button>
             <button
               onClick={() => setAmount(50)}
-              className=" p-4 grid place-items-center rounded-full bg-transparent border border-solid border-[#1E1E1E] "
+              className={`w-[68px] h-[68px] grid place-items-center rounded-full  border border-solid border-[#1E1E1E] ${
+                amount === 50
+                  ? "bg-[#1E1E1E] text-white"
+                  : " bg-white text-[#1E1E1E] "
+              } `}
             >
               $50
             </button>
             <button
               onClick={() => setAmount(100)}
-              className=" p-4 grid place-items-center rounded-full bg-transparent border border-solid border-[#1E1E1E] "
+              className={`w-[68px] h-[68px] grid place-items-center rounded-full  border border-solid border-[#1E1E1E] ${
+                amount === 100
+                  ? "bg-[#1E1E1E] text-white"
+                  : " bg-white text-[#1E1E1E] "
+              } `}
             >
               $100
             </button>

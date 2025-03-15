@@ -89,8 +89,8 @@ const ReachOut = () => {
       </div>
 
       <div className="w-full mt-[100px] flex items-center justify-center md:border-t md:border-b border-solid border-t-0  border-[#1E1E1E33] py-3 ">
-        <div className="max-w-[900px] py-7 w-full flex flex-wrap flex-col-reverse items-center justify-center gap-12">
-          <div className="flex flex-col items-start justify-start gap-6 text-[#1E1E1E] font-DMSans text-2xl font-semibold md:border-r border-solid border-[#1E1E1E33] pt-8 md:pt-0 border-t md:border-b md:border-t-0  pr-10 ">
+        <div className="max-w-[1200px] py-7 w-full flex flex-col-reverse  md:flex-row items-center justify-center gap-12">
+          <div className="flex flex-col items-start justify-start gap-6 text-[#1E1E1E] font-DMSans text-2xl font-semibold md:border-r border-solid border-[#1E1E1E33] pt-8 md:pt-0 border-t  md:border-t-0  pr-10 ">
             <h1>Need the personal touch? Schedule a call.</h1>
             <div className="flex items-start justify-center gap-5">
               <img src="/sarahcall.webp" alt="" />
@@ -103,7 +103,7 @@ const ReachOut = () => {
               </div>
             </div>
           </div>
-          <img className="" src="/phone.webp" alt="" />
+          <img className="w-full md:w-fit" src="/phone.webp" alt="" />
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const Herosection = ({
   setDonate: (value: boolean) => void;
 }) => {
   return (
-    <div className="heroBg min-h-screen pt-[150px] pb-[150px] md:pb-[450px] px-[33px]  mt-[80px] flex flex-col justify-center items-center ">
+    <div className="heroBg min-h-screen w-full pt-[150px] pb-[150px] md:pb-[450px] px-[33px]  mt-[80px] flex flex-col justify-center items-center ">
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}

@@ -84,15 +84,15 @@ const MorePosts = () => {
         Explore More Posts
       </h1>
       <div className="w-full mt-[160px] flex justify-center border-b border-[#1E1E1E33] border-solid px-6 pb-5 ">
-        <h1 className="font-DarkerGrotesque w-full max-w-[1200px] text-[#1E1E1E80] text-[32px] text-start font-semibold ">
+        <h1 className="font-DarkerGrotesque px-6  w-full max-w-[1200px] text-[#1E1E1E80] text-[32px] text-start font-semibold ">
           Events Reports
         </h1>
       </div>
       <div
         ref={scrollRef}
-        className=" mt-5  relative w-full overflow-x-scroll hideScrollbar "
+        className=" mt-5 px-6  relative w-full overflow-x-scroll hideScrollbar "
       >
-        <div className="flex pl-10 md:pl-[150px] pr-10 min-w-max gap-10">
+        <div className="flex max-w-[1200px] justify-center w-full md:pl-[40px] pb-2  mx-auto pr-10 min-w-max gap-10">
           {blogDets.map((blog, index) => (
             <BlogCard key={index} {...blog} rightArrow={true} />
           ))}

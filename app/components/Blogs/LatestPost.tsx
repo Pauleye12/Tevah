@@ -56,11 +56,11 @@ const LatestPost = () => {
   return (
     <div className="pt-[180px] bg-white w-full pb-10 flex flex-col justify-center items-center font-DMSans ">
       <div className="w-full flex justify-center border-b border-[#1E1E1E33] border-solid px-6 pb-5 ">
-        <h1 className="font-DarkerGrotesque w-full max-w-[1200px] text-[#1E1E1E80] text-[32px] text-start font-semibold ">
+        <h1 className="font-DarkerGrotesque px-6  w-full max-w-[1200px] text-[#1E1E1E80] text-[32px] text-start font-semibold ">
           Latest Post
         </h1>
       </div>
-      <div className="w-full mt-5 max-w-[1200px] flex flex-wrap justify-center gap-6 gap-y-16 px-6 pb-5 ">
+      <div className="w-full mt-5 max-w-[1200px] flex flex-wrap justify-around gap-6 gap-y-16 px-6 pb-5 ">
         {posts.map((post, index) => (
           <ArticleCard key={index} {...post} />
         ))}

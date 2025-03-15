@@ -116,11 +116,6 @@ const Involved = () => {
   const [getInvolved, setGetInvolved] = useState(false);
   return (
     <div className="bg-[#1E1E1E] font-DMSans relative  pt-[50px] grid place-items-center ">
-      {/* <img
-        className="absolute w-[91px] md:w-fit right-0 top-0 "
-        src="./square2.webp"
-        alt=""
-      /> */}
       <svg
         width="216"
         height="216"
@@ -200,13 +195,13 @@ const Involved = () => {
       </svg>
 
       <img
-        className="absolute  left-[30px] top-[30px] "
+        className="absolute md:hidden  left-[30px] top-[30px] "
         src="./Dots.webp"
         alt=""
       />
 
-      <div className="max-w-[1100px]  mt-10 md:mt-0 w-full ">
-        <div className="flex flex-col px-6 items-start justify-start ">
+      <div className="max-w-[1200px] px-6  mt-10 md:mt-0 w-full ">
+        <div className="flex flex-col  items-start justify-start ">
           <h1 className="capitalize mb-3  text-[#F2F2F280] text-[32px]  text-semibold font-DarkerGrotesque ">
             How to get involved
           </h1>

@@ -31,10 +31,10 @@ const PWrapper = () => {
       <motion.div
         className="absolute top-1/2 -translate-1/2 left-1/2   "
         key={index}
-        initial={{ x: "100%" }}
+        initial={{ x: "130%" }}
         animate={{ x: 0 }}
-        exit={{ x: "-100%" }}
-        transition={{ duration: 0.35, ease: "linear" }}
+        exit={{ x: "-130%" }}
+        transition={{ duration: 0.45, ease: "linear" }}
       >
         {Component}
       </motion.div>
@@ -85,7 +85,7 @@ const Partners = () => {
           <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
           <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
           <div className="w-[100px] md:w-[210px] h-[100px] md:h-[210px] bg-[#E6E6E6]"></div>
-          <div className="w-[100px] relative overflow-hidden md:w-[210px] h-[100px] text-[#1E1E1E] font-semibold text-xl md:h-[210px] flex  bg-white">
+          <div className="w-[100px] relative overflow-hidden md:w-[210px] h-[100px] text-[#1E1E1E] font-medium text-xl md:h-[210px] flex  bg-white">
             <PWrapper />
           </div>
         </div>
