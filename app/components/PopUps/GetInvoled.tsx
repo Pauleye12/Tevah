@@ -38,7 +38,7 @@ const GetInvoled = ({
           viewBox="0 0 291 356"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-0 right-0"
+          className="absolute bottom-0 right-0 hidden md:block "
         >
           <g clip-path="url(#clip0_273_8124)">
             <path d="M89 0H0V89H89V0Z" fill="#1E1E1E" fill-opacity="0.25" />
