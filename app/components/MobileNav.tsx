@@ -11,11 +11,11 @@ const MobileNav = ({
 }) => {
   return (
     <motion.div
-      // key="mobile-nav"
-      initial={{ opacity: 0.2, y: -80 }}
+      key={Date.now()}
+      initial={{ opacity: 0.2, y: -120 }}
       animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -100 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
+      exit={{ opacity: 0.2, y: -120 }}
+      transition={{ duration: 0.3, ease: "linear" }}
       className="bg-white md:hidden absolute pb-12 top-[100%] px-9 pt-6 left-0 w-full z-50"
     >
       <div className="flex w-full flex-col bg-white items-center justify-center text-xl font-medium font-DMSans text-[#1E1E1E] ">

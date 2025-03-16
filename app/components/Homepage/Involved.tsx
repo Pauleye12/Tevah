@@ -18,7 +18,7 @@ const squareVariants: Variants = {
     },
   },
 };
-
+//Desktop version
 const Donate = ({
   setGetInvolved,
 }: {
@@ -94,6 +94,38 @@ const Partner = ({
             Give Your Time, Make a Difference
           </h2>
           <p>
+            Your time and skills can create real change! Whether you're
+            mentoring students, helping with events, or assisting with community
+            programs, your efforts bring hope and opportunity to those who need
+            it most. Volunteering is more than just giving back—it’s about
+            creating meaningful connections and leaving a lasting impact.
+          </p>
+        </div>
+        <button
+          onClick={() => setGetInvolved(true)}
+          className="whiteBtn border-2 cursor-pointer border-solid border-white rounded-[12px] px-4 py-3 text-[#1E1E1E] font-medium "
+        >
+          Get Involved
+        </button>
+      </div>
+    </div>
+  );
+};
+
+//Mobile version
+const DonateMobile = ({
+  setGetInvolved,
+}: {
+  setGetInvolved: (value: boolean) => void;
+}) => {
+  return (
+    <div className="foodAidBgMobile  w-full min-h-full items-end py-3 pb-9 pt-[100px] px-8 ">
+      <div className="flex flex-col items-start gap-6  w-full justify-between">
+        <div className="text-white max-w-[400px] w-full flex flex-col gap-6 ">
+          <h2 className="text-lg font-semibold">
+            Give Your Time, Make a Difference
+          </h2>
+          <p className="font-light">
             Your time and skills can create real change! Whether you're
             mentoring students, helping with events, or assisting with community
             programs, your efforts bring hope and opportunity to those who need
@@ -200,8 +232,8 @@ const Involved = () => {
         alt=""
       />
 
-      <div className="max-w-[1200px] px-6  mt-10 md:mt-0 w-full ">
-        <div className="flex flex-col  items-start justify-start ">
+      <div className="md:max-w-[1200px] md:px-6  mt-10 md:mt-0 w-full ">
+        <div className="flex px-6 md:px-0 flex-col  items-start justify-start ">
           <h1 className="capitalize mb-3  text-[#F2F2F280] text-[32px]  text-semibold font-DarkerGrotesque ">
             How to get involved
           </h1>
@@ -217,111 +249,138 @@ const Involved = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-[100px] md:rounded-t-4xl flex px-5 md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative "
+          className="mt-[100px] md:rounded-t-4xl flex  md:px-0 md:pl-14  bg-[#F8F8FA] w-full relative "
         >
-          <div className="md:w-[50%] w-full md:py-[60px] py-[30px] pr-3 flex flex-col gap-6  ">
+          <div className="md:w-[50%] w-full md:py-[60px] py-[30px] md:pr-3 flex flex-col md:gap-4  ">
             <img
               className="absolute hidden md:flex  left-[60px] top-[30px] "
               src="./Dots.webp"
               alt=""
             />
+
+            {/* Donate */}
             <div
               onClick={() => setWhichInfo("donate")}
-              className=" w-full  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 cursor-pointer justify-between border-b-2 border-t-2 border-[#C5C5C580] border-solid md:border-none "
+              className="flex flex-col w-full"
             >
-              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
-                {whichInfo === "donate" && (
-                  <span className="hidden md:flex">
-                    <RightArrowOrange />
+              <div className=" md:w-full mx-5 md:mx-0  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 cursor-pointer justify-between border-t-2 border-[#C5C5C580] border-solid md:border-none ">
+                <p className="flex items-center md:w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                  {whichInfo === "donate" && (
+                    <span className="hidden md:flex">
+                      <RightArrowOrange />
+                    </span>
+                  )}
+                  <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                    <PlusIcon />
                   </span>
-                )}
-                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
-                  <PlusIcon />
-                </span>
-                <span
+                  <span
+                    className={`${
+                      whichInfo === "donate"
+                        ? "text-[#FF7C3F]"
+                        : "text-[#1E1E1E]"
+                    }`}
+                  >
+                    Donate
+                  </span>
+                </p>
+                <p
                   className={`${
-                    whichInfo === "donate" ? "text-[#FF7C3F]" : "text-[#1E1E1E]"
+                    whichInfo === "donate"
+                      ? "text-[#FF7C3F] text-[24px]"
+                      : "text-[#C5C5C580] text-[24px]"
                   }`}
                 >
-                  Donate
-                </span>
-              </p>
-              <p
-                className={`${
-                  whichInfo === "donate"
-                    ? "text-[#FF7C3F] text-[24px]"
-                    : "text-[#C5C5C580] text-[24px]"
-                }`}
-              >
-                01
-              </p>
-            </div>
-            <div
-              onClick={() => setWhichInfo("volunteer")}
-              className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 cursor-pointer border-b-2 border-[#C5C5C580] border-solid md:border-none "
-            >
-              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
-                {whichInfo === "volunteer" && (
-                  <span className="hidden md:flex">
-                    <RightArrowOrange />
-                  </span>
+                  01
+                </p>
+              </div>
+              <div className=" md:hidden  w-full ">
+                {whichInfo === "donate" && (
+                  <DonateMobile setGetInvolved={setGetInvolved} />
                 )}
-                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
-                  <PlusIcon />
-                </span>
-                <span
+              </div>
+            </div>
+
+            {/* Volunteer */}
+            <div
+              className="flex flex-col w-full"
+              onClick={() => setWhichInfo("volunteer")}
+            >
+              <div className=" md:w-full mx-5 md:mx-0  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 cursor-pointer justify-between border-t-2 border-[#C5C5C580] border-solid md:border-none ">
+                <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                  {whichInfo === "volunteer" && (
+                    <span className="hidden md:flex">
+                      <RightArrowOrange />
+                    </span>
+                  )}
+                  <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                    <PlusIcon />
+                  </span>
+                  <span
+                    className={`${
+                      whichInfo === "volunteer"
+                        ? "text-[#FF7C3F]"
+                        : "text-[#1E1E1E]"
+                    }`}
+                  >
+                    Volunteer
+                  </span>
+                </p>
+                <p
                   className={`${
                     whichInfo === "volunteer"
-                      ? "text-[#FF7C3F]"
-                      : "text-[#1E1E1E]"
+                      ? "text-[#FF7C3F] text-[24px]"
+                      : "text-[#C5C5C580] text-[24px]"
                   }`}
                 >
-                  Volunteer
-                </span>
-              </p>
-              <p
-                className={`${
-                  whichInfo === "volunteer"
-                    ? "text-[#FF7C3F] text-[24px]"
-                    : "text-[#C5C5C580] text-[24px]"
-                }`}
-              >
-                02
-              </p>
-            </div>
-            <div
-              onClick={() => setWhichInfo("partner")}
-              className="text-[#1E1E1E] text-xl md:text-[28px] font-semibold md:font-medium flex items-center justify-between gap-6 cursor-pointer border-b-2 border-[#C5C5C580] border-solid md:border-none "
-            >
-              <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
-                {whichInfo === "partner" && (
-                  <span className="hidden md:flex">
-                    <RightArrowOrange />
-                  </span>
+                  02
+                </p>
+              </div>
+              <div className=" md:hidden  w-full ">
+                {whichInfo === "volunteer" && (
+                  <DonateMobile setGetInvolved={setGetInvolved} />
                 )}
-                <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
-                  <PlusIcon />
-                </span>
-                <span
+              </div>
+            </div>
+
+            {/* Partner */}
+            <div onClick={() => setWhichInfo("partner")}>
+              <div className=" md:w-full mx-5 md:mx-0  text-xl md:text-[28px] font-semibold md:font-medium flex items-center gap-6 cursor-pointer justify-between border-t-2 border-[#C5C5C580] border-solid md:border-none ">
+                <p className="flex items-center w-full md:border-b-2 md:border-[#C5C5C580] md:border-solid px-1 py-5  gap-2">
+                  {whichInfo === "partner" && (
+                    <span className="hidden md:flex">
+                      <RightArrowOrange />
+                    </span>
+                  )}
+                  <span className="flex items-center justify-center border border-solid border-[#C5C5C5] p-3 mr-2 bg-[#1E1E1E] rounded-full md:hidden">
+                    <PlusIcon />
+                  </span>
+                  <span
+                    className={`${
+                      whichInfo === "partner"
+                        ? "text-[#FF7C3F]"
+                        : "text-[#1E1E1E]"
+                    }`}
+                  >
+                    Partner With Us
+                  </span>
+                </p>
+                <p
                   className={`${
                     whichInfo === "partner"
-                      ? "text-[#FF7C3F]"
-                      : "text-[#1E1E1E]"
+                      ? "text-[#FF7C3F] text-[24px]"
+                      : "text-[#C5C5C580] text-[24px]"
                   }`}
                 >
-                  Partner With Us
-                </span>
-              </p>
-              <p
-                className={`${
-                  whichInfo === "partner"
-                    ? "text-[#FF7C3F] text-[24px]"
-                    : "text-[#C5C5C580] text-[24px]"
-                }`}
-              >
-                03
-              </p>
+                  03
+                </p>
+              </div>
+              <div className=" md:hidden  w-full ">
+                {whichInfo === "partner" && (
+                  <DonateMobile setGetInvolved={setGetInvolved} />
+                )}
+              </div>
             </div>
+
             <img
               className="absolute hidden md:flex  left-[60px] bottom-[20px] "
               src="./Dots.webp"

@@ -6,7 +6,7 @@ import Donate from "./PopUps/Donate";
 const Footer = ({ bgColor }: { bgColor: string }) => {
   const [donate, setDonate] = useState(false);
   return (
-    <div className="w-full font-DMSans px-6 mx-auto">
+    <div className="w-full font-DMSans mx-auto">
       {donate && <Donate setDonate={setDonate} />}
       <div
         style={{ backgroundColor: bgColor }}

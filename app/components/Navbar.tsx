@@ -25,10 +25,10 @@ const Navbar = ({ setDonate }: { setDonate: (donate: boolean) => void }) => {
 
         {/* Mobile Navbar */}
         {isMobileNavOpen && (
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {" "}
             <MobileNav
-              key="mobile-nav1"
+              key={Date.now()}
               setIsMobileNavOpen={setIsMobileNavOpen}
               setDonate={setDonate}
             />

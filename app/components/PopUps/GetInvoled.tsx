@@ -82,12 +82,12 @@ const GetInvoled = ({
         </svg>
 
         <div className="w-full rounded-t-[36px] h-[110px] checkerBg2 md:hidden"></div>
-        <div className="bg-white text-[#1E1E1E]  w-full rounded-t-[36px] px-5 md:px-[50px] pb-[100px] flex flex-col gap-3 py-9  ">
+        <div className="bg-white text-[#1E1E1E]  w-full rounded-t-[36px] px-5 md:px-[50px] pb-[30px] flex flex-col gap-3 py-9  ">
           <h1 className="text-[#1E1E1E] font-DarkerGrotesque text-2xl md:text-[36px] leading-[24px] md:leading-[36px] max-w-[450px] w-full text-left font-black ">
             Be the Change – Get Involved Today!
           </h1>
           <p className="mt-2">Please fill the form below:</p>
-          <div className="w-full mt-11 flex flex-col items-center justify-center gap-10">
+          <div className="w-full mt-6 flex flex-col items-center justify-center gap-10">
             <div className="w-full flex flex-col md:flex-row  items-center justify-between gap-10">
               <div className="flex w-full flex-col items-start justify-start gap-2">
                 <label htmlFor="fistName">First Name*</label>

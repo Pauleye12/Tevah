@@ -51,10 +51,11 @@ const Mission = () => {
   return (
     <div className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center  font-DMSans relative px-7">
       <img
-        className="absolute w-[184px] transition-all duration-2000 animate-pulse md:w-fit  md:top-5 top-[210px] md:left-[300px] left-[260px]"
+        className=" absolute md:top-5 top-[210px] md:left-[300px] left-[260px] w-[184px] transition-all duration-2000 animate-pulse md:w-fit  "
         src="./circle.webp"
         alt=""
       />
+
       <div className="max-w-[1200px]  flex flex-col gap-3 items-start justify-center ">
         <div className="w-full text-xl md:text-[32px] text-[#1E1E1E80] font-semibold font-DarkerGrotesque flex justify-between items-center ">
           <h1>Our Mission</h1>
@@ -79,6 +80,7 @@ const Mission = () => {
             variants={imgWrapperVariants}
             initial="initial"
             whileInView="inView"
+            viewport={{ once: true }}
             className="w-full flex gap-6 "
           >
             {/* Refactor to add background image */}

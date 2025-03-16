@@ -156,6 +156,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.foodAidBgMobile {
+  background: url("../public/mobileFoodAid.png"),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),
+    linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .foodAidBg2 {
   background: url("../public/time.webp"),
     linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)),

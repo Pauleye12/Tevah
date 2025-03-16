@@ -29,7 +29,7 @@ const textBoxVariants2: Variants = {
 
 const ToBeHeard = () => {
   return (
-    <div className="heroBg h-[90vh] hideScrollbar overflow-y-scroll mt-[80px] font-DMSans ">
+    <div className="heroBg h-[90vh] overflow-x-hidden hideScrollbar  mt-[80px] font-DMSans ">
       {/* first section */}
       <div className="w-full flex items-center justify-center pt-[72px] md:pb-[100px] pb-[30px] min-h-screen bg-white">
         <div className="max-w-[1150px] w-full px-5 flex flex-col items-start gap-10  ">
@@ -65,7 +65,7 @@ const ToBeHeard = () => {
       <div className="w-full, h-screen bg-transparent"></div>
       {/* third section */}
       <div className="w-full py-[180px] flex items-center justify-center bg-white">
-        <div className="max-w-[1200px] w-full px-5 flex flex-col items-start gap-[63px] relative text-[#1E1E1E]  ">
+        <div className="max-w-[1200px] w-full px-6 flex flex-col items-start gap-[63px] relative text-[#1E1E1E]  ">
           {/* <img
             className=" w-[241px] md:w-fit absolute right-5 md:left-1/2 md:-translate-1/2 top-[180px] md:top-1/2  "
             src="./Vector.webp"
@@ -103,6 +103,7 @@ const ToBeHeard = () => {
               variants={textBoxVariants}
               initial="initial"
               whileInView="inView"
+              viewport={{ once: true }}
               className="flex flex-col gap-4 max-w-[256px] md:max-w-[490px] w-full"
             >
               <h2 className="text-[32px] font-DarkerGrotesque font-bold ">
@@ -120,6 +121,7 @@ const ToBeHeard = () => {
               variants={textBoxVariants2}
               initial="initial"
               whileInView="inView"
+              viewport={{ once: true }}
               className="flex flex-col gap-4 md:max-w-[329px] max-w-[256px] w-full"
             >
               <h2 className="text-[32px] font-DarkerGrotesque font-bold ">
