@@ -24,7 +24,7 @@ const GetInvoled = ({
         variants={textVariants}
         initial="initial"
         animate="animate"
-        className="bg-white text-[#1E1E1E] relative w-full max-w-[890px] rounded-t-[36px] flex flex-col gap-3 "
+        className="bg-white text-[#1E1E1E] relative h-full hideScrollbar overflow-y-scroll hide w-full max-w-[890px] pb-[70px] rounded-t-[36px] flex flex-col gap-3 "
       >
         <button
           onClick={() => setGetInvolved(false)}
@@ -174,6 +174,10 @@ const GetInvoled = ({
               </div>
             )}
           </div>
+
+          <button className="bg-[#1E1E1E] mt-5 text-white py-3 px-7 rounded-md blackBG w-fit cursor-pointer font-medium">
+            Submit
+          </button>
         </div>
       </motion.div>
     </div>
