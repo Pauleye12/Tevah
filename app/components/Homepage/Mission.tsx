@@ -1,10 +1,29 @@
 import { RightArrow } from "../SVGs/RightArrow";
 import { useRef, useState, useEffect } from "react";
 import { motion } from "motion/react";
+import gsap from "gsap";
 
 const Mission = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const circleRef = useRef<HTMLImageElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const imgWrapperVariants = {
+    initial: { opacity: 1 },
+    inView: {
+      opacity: 1,
+      transition: { duration: 0.2, ease: "easeOut", staggerChildren: 0.3 },
+    },
+  };
+  const imgVariants = {
+    initial: { opacity: 0.6, y: 100 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
 
   const handleScrollLeft = () => {
     if (scrollRef.current) {
@@ -32,26 +51,38 @@ const Mission = () => {
     };
   }, []);
 
-  const imgWrapperVariants = {
-    initial: { opacity: 1 },
-    inView: {
-      opacity: 1,
-      transition: { duration: 0.2, ease: "easeOut", staggerChildren: 0.3 },
-    },
-  };
-  const imgVariants = {
-    initial: { opacity: 0.6, y: 100 },
-    inView: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  // GSAP ScrollTrigger setup
+  useEffect(() => {
+    if (circleRef.current && containerRef.current) {
+      const computedStyle = window.getComputedStyle(circleRef.current);
+      const topHeight =
+        Number(computedStyle.top.slice(0, -2)) +
+        Number(computedStyle.height.slice(0, -2));
+      const offsetY = isNaN(topHeight) ? 0 : topHeight;
+
+      gsap.to(circleRef.current, {
+        scrollTrigger: {
+          pin: true,
+          scrub: true,
+          start: "top top",
+          end: `bottom ${offsetY + "px"}`,
+          trigger: circleRef.current,
+          endTrigger: containerRef.current,
+        },
+        ease: "none",
+        rotation: 360,
+      });
+    }
+  }, []);
 
   return (
-    <div className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center  font-DMSans relative px-7">
+    <div
+      ref={containerRef}
+      className="bg-white pb-[110px] md:pb-[230px] md:pt-[160px] pt-[100px] flex justify-center  font-DMSans relative px-7"
+    >
       <img
-        className=" absolute md:top-5 top-[210px] md:left-[300px] left-[260px] w-[184px] transition-all duration-2000 animate-pulse md:w-fit  "
+        ref={circleRef}
+        className=" absolute md:top-5 top-[210px] md:left-[300px] left-[260px] w-[184px] md:w-fit"
         src="./circle.webp"
         alt=""
       />
