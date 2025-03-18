@@ -19,12 +19,12 @@ const Team = () => {
           </p>
         </div>
       </div>
-      <div className="border-b py-6 border-solid flex justify-center items-center px-5 w-full border-[#1E1E1E33]">
-        <div className="max-w-[1200px] w-full flex md:flex-row flex-col justify-center gap-12 ">
+      <div className="border-b py-2 lg:py-6 border-solid flex justify-center items-center px-5 w-full border-[#1E1E1E33]">
+        <div className="max-w-[1200px] w-full flex lg:flex-row flex-col justify-center gap-0 lg:gap-12 ">
           <div className="flex flex-col">
-            <div className=" max-w-[500px] py-7 text-[#1E1E1E] w-full flex md:gap-6 gap-4 ">
+            <div className=" lg:max-w-[500px] py-4 lg:py-7 text-[#1E1E1E] w-full flex md:gap-6 gap-4 ">
               <img
-                className="w-[175px] rounded-lg md:w-fit "
+                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./David.webp"
                 alt=""
               />
@@ -42,9 +42,9 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className=" max-w-[500px] py-7 border-t border-solid border-[#1E1E1E33] text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
+            <div className=" lg:max-w-[500px] py-4 lg:py-7 lg:border-t border-solid border-[#1E1E1E33] text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className="w-[175px] rounded-lg md:w-fit "
+                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./Micheal.webp"
                 alt=""
               />
@@ -63,10 +63,11 @@ const Team = () => {
               </div>
             </div>
           </div>
-          <div className="flex border-l-0 md:border-l-2 md:px-10 border-solid border-[#1E1E1E33] flex-col">
-            <div className=" max-w-[500px] py-7 text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
+
+          <div className="flex border-l-0 md:border-l-2 lg:px-10 lg:border-solid lg:border-[#1E1E1E33] flex-col">
+            <div className=" lg:max-w-[500px] py-4 lg:py-7 text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className="w-[175px] rounded-lg md:w-fit "
+                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./carter.webp"
                 alt=""
               />
@@ -86,9 +87,9 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div className=" max-w-[500px] py-7 border-t border-solid border-[#1E1E1E33]  text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
+            <div className=" lg:max-w-[500px] py-4 lg:py-7 lg:border-t border-solid border-[#1E1E1E33]  text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className="w-[175px] rounded-lg md:w-fit "
+                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./sarah.webp"
                 alt=""
               />

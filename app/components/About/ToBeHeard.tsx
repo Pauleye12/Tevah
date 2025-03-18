@@ -77,7 +77,7 @@ const ToBeHeard = () => {
             viewBox="0 0 412 412"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className=" w-[241px] md:w-fit absolute right-5 md:left-1/2 md:-translate-1/2 top-[80px] md:top-1/2  "
+            className=" w-[241px] md:w-fit absolute right-5 md:left-1/2 md:-translate-1/2 top-[48vw] xs:top-[80px] sm:top-[0px] md:top-[200px] lg:top-1/2  "
           >
             <path
               d="M-3.05176e-05 412L239.393 412L412 412L412 239.393L412 0L239.393 -1.50898e-05L239.393 239.393L-1.54278e-05 239.393L-3.05176e-05 412Z"
@@ -104,7 +104,7 @@ const ToBeHeard = () => {
               initial="initial"
               whileInView="inView"
               viewport={{ once: true }}
-              className="flex flex-col gap-4 max-w-[256px] md:max-w-[490px] w-full"
+              className="flex flex-col gap-4 max-w-[100%] pr-[125px] lg:pr-0 md:max-w-[490px] w-full"
             >
               <h2 className="text-[32px] font-DarkerGrotesque font-bold ">
                 Our Mission
@@ -116,7 +116,7 @@ const ToBeHeard = () => {
               </p>
             </motion.div>
           </div>
-          <div className="w-full mt-[100px] md:mt-0 flex justify-end ">
+          <div className="w-full mt-[22vw] lg:mt-0 flex justify-end ">
             <motion.div
               variants={textBoxVariants2}
               initial="initial"
