@@ -24,7 +24,7 @@ const Team = () => {
           <div className="flex flex-col">
             <div className=" lg:max-w-[500px] py-4 lg:py-7 text-[#1E1E1E] w-full flex md:gap-6 gap-4 ">
               <img
-                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
+                className={`min-h-[100px] max-h-[196px] max-w-[175px] md:max-w-auto md:max-h-[210px] md:aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./David.webp"
                 alt=""
               />
@@ -44,7 +44,7 @@ const Team = () => {
             </div>
             <div className=" lg:max-w-[500px] py-4 lg:py-7 lg:border-t border-solid border-[#1E1E1E33] text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
+                className={`min-h-[100px] max-h-[196px] max-w-[175px] md:max-w-auto md:max-h-[210px] md:aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./Micheal.webp"
                 alt=""
               />
@@ -67,7 +67,7 @@ const Team = () => {
           <div className="flex border-l-0 md:border-l-2 lg:px-10 lg:border-solid lg:border-[#1E1E1E33] flex-col">
             <div className=" lg:max-w-[500px] py-4 lg:py-7 text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
+                className={`min-h-[100px] max-h-[196px] max-w-[175px] md:max-w-auto md:max-h-[210px] md:aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./carter.webp"
                 alt=""
               />
@@ -89,7 +89,7 @@ const Team = () => {
             </div>
             <div className=" lg:max-w-[500px] py-4 lg:py-7 lg:border-t border-solid border-[#1E1E1E33]  text-[#1E1E1E] w-full flex gap-4 md:gap-6 ">
               <img
-                className={`min-h-[100px] max-h-[210px] aspect-210/187 rounded-lg md:w-fit object-cover `}
+                className={`min-h-[100px] max-h-[196px] max-w-[175px] md:max-w-auto md:max-h-[210px] md:aspect-210/187 rounded-lg md:w-fit object-cover `}
                 src="./sarah.webp"
                 alt=""
               />
