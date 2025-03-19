@@ -19,70 +19,74 @@ const GetInvoled = ({
   const [dropdown, setDropdown] = useState(true);
   const [dropdownValue, setDropdownValue] = useState("Select Item");
   return (
-    <div className="bg-[#1e1e1e99] w-full h-screen fixed top-0 left-0 z-50 font-DMSans flex justify-center items-end ">
+    <div className="bg-[#1e1e1e99] w-full h-screen fixed top-0 left-0 z-50 font-DMSans flex justify-center items-end   ">
       <motion.div
         variants={textVariants}
         initial="initial"
         animate="animate"
-        className="bg-white text-[#1E1E1E] relative h-full hideScrollbar overflow-y-scroll hide w-full max-w-[890px] pb-[70px] rounded-t-[36px] flex flex-col gap-3 "
+        className="bg-white  text-[#1E1E1E] justify-end mx-auto relative h-full  w-full max-w-[890px] hideScrollbar overflow-y-scroll rounded-t-[36px]  gap-3 "
       >
         <button
           onClick={() => setGetInvolved(false)}
-          className="p-2 grid place-items-center rounded-full border border-solid bg-white border-[#5C5C5C] cursor-pointer absolute top-10 right-10"
+          className="p-2 grid place-items-center rounded-full border border-solid bg-white z-30 border-[#5C5C5C] cursor-pointer absolute top-10 right-10"
         >
           <Close />
         </button>
-        <svg
-          width="291"
-          height="356"
-          viewBox="0 0 291 356"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute bottom-0 right-0 hidden md:block "
-        >
-          <g clip-path="url(#clip0_273_8124)">
-            <path d="M89 0H0V89H89V0Z" fill="#1E1E1E" fill-opacity="0.25" />
-            <path d="M267 0H178V89H267V0Z" fill="#1E1E1E" fill-opacity="0.25" />
-            <path
-              d="M178 267H89V356H178V267Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-            <path
-              d="M356 267H267V356H356V267Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-            <path
-              d="M178 89H89V178H178V89Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-            <path
-              d="M356 89H267V178H356V89Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-            <path
-              d="M89 178.349H0V267.349H89V178.349Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-            <path
-              d="M267 178.349H178V267.349H267V178.349Z"
-              fill="#1E1E1E"
-              fill-opacity="0.25"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_273_8124">
-              <rect width="356" height="356" fill="white" />
-            </clipPath>
-          </defs>
-        </svg>
 
         <div className="w-full rounded-t-[36px] h-[110px] checkerBg2 md:hidden"></div>
-        <div className="bg-white text-[#1E1E1E]  w-full rounded-t-[36px] px-5 md:px-[50px] pb-[30px] flex flex-col gap-3 py-9  ">
+        <div className="bg-white  text-[#1E1E1E]  w-full  px-5 md:px-[50px] pb-[30px] relative flex flex-col gap-3 py-9  ">
+          <svg
+            width="291"
+            height="356"
+            viewBox="0 0 291 356"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute bottom-0 right-0 rounded-t-[36px] hidden md:block "
+          >
+            <g clip-path="url(#clip0_273_8124)">
+              <path d="M89 0H0V89H89V0Z" fill="#1E1E1E" fill-opacity="0.25" />
+              <path
+                d="M267 0H178V89H267V0Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M178 267H89V356H178V267Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M356 267H267V356H356V267Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M178 89H89V178H178V89Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M356 89H267V178H356V89Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M89 178.349H0V267.349H89V178.349Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+              <path
+                d="M267 178.349H178V267.349H267V178.349Z"
+                fill="#1E1E1E"
+                fill-opacity="0.25"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_273_8124">
+                <rect width="356" height="356" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
           <h1 className="text-[#1E1E1E] font-DarkerGrotesque text-2xl md:text-[36px] leading-[24px] md:leading-[36px] max-w-[450px] w-full text-left font-black ">
             Be the Change – Get Involved Today!
           </h1>
@@ -127,10 +131,7 @@ const GetInvoled = ({
           </div>
           <p className="mt-5">Preferred way to get involved</p>
           <div className="relative max-w-[208px] w-full font-Manrope">
-            <button
-              onClick={() => setDropdown(!dropdown)}
-              className="shadow-xl w-full cursor-pointer flex gap-2 bg-white rounded-lg  items-center px-6 py-2 "
-            >
+            <button className="shadow-xl w-full cursor-pointer flex gap-2 bg-white rounded-lg  items-center px-6 py-2 ">
               {dropdownValue}{" "}
               <span className="">
                 {" "}
@@ -140,33 +141,25 @@ const GetInvoled = ({
             {dropdown && (
               <div className=" text-[#333333] mt-4 flex flex-col items-start px-2 pt-3 justify-start gap-2 w-full bg-white rounded-lg shadow-xl">
                 <button
-                  onClick={() => (
-                    setDropdownValue("Volunteer"), setDropdown(!dropdown)
-                  )}
+                  onClick={() => setDropdownValue("Volunteer")}
                   className="px-4 cursor-pointer py-2"
                 >
                   Volunteer
                 </button>
                 <button
-                  onClick={() => (
-                    setDropdownValue("Mentor"), setDropdown(!dropdown)
-                  )}
+                  onClick={() => setDropdownValue("Mentor")}
                   className="px-4 cursor-pointer py-2"
                 >
                   Mentor
                 </button>
                 <button
-                  onClick={() => (
-                    setDropdownValue("Fundraise"), setDropdown(!dropdown)
-                  )}
+                  onClick={() => setDropdownValue("Fundraise")}
                   className="px-4 cursor-pointer py-2"
                 >
                   Fundraise
                 </button>
                 <button
-                  onClick={() => (
-                    setDropdownValue("Partner With Us"), setDropdown(!dropdown)
-                  )}
+                  onClick={() => setDropdownValue("Partner With Us")}
                   className="px-4 cursor-pointer py-2"
                 >
                   Partner With Us
